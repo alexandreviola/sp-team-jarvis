@@ -13,10 +13,17 @@
 # Author:
 #   cpradio
 
+Array::shuffle = -> @sort -> 0.5 - Math.random()
+next_counter = [3..6]
+
+initialize_counter = () ->
+  next_counter.shuffle()
+  return next_counter[0]
+
 module.exports = (robot) ->
   watching = {
     'molona': { 
-      counter: 8, 
+      counter: initialize_counter(), 
       quips: [
         "@molona, Really?!?",
         "@molona, You can't be serious!",
@@ -29,7 +36,7 @@ module.exports = (robot) ->
       ]
     }, 
     'jim': { 
-      counter: 4, 
+      counter: initialize_counter(), 
       quips: [
         "@jim, Really?!? Another pug bomb?",
         "@jim, Doesn't this start to get old?",
@@ -48,5 +55,8 @@ module.exports = (robot) ->
     if sender of watching
       watching[sender].counter -= 1
       if watching[sender].counter == 0
-        msg.send msg.random watching[sender].quips
-        watching[sender].counter = msg.random [3..8]
+        watching[sender].quips.shuffle()
+        msg.send watching[sender].quips[0]
+        
+        next_counter.shuffle()
+        watching[sender].counter = next_counter[0]
