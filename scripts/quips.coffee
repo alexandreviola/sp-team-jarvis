@@ -35,7 +35,7 @@ module.exports = (robot) ->
         "@molona, You failed to mention your perfection in that last remark."
       ]
     }, 
-    'cpradio': { 
+    'jim': { 
       counter: initialize_counter(), 
       quips: [
         "@jim, Really?!? Another {msg}?",
@@ -56,5 +56,8 @@ module.exports = (robot) ->
         watching[sender].quips.shuffle()
         msg.send watching[sender].quips[0].replace /{msg}/gi, msg.message.text.replace /jarvis\s/i, ''
         
-        next_counter.shuffle()
-        watching[sender].counter = next_counter[0]
+        if quip[0].match /one more command/i
+          watching[sender].counter = 1
+        else
+          next_counter.shuffle()
+          watching[sender].counter = next_counter[0]
