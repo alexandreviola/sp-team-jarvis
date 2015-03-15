@@ -52,7 +52,7 @@ module.exports = (robot) ->
     
     if sender of watching
       watching[sender].counter -= 1
-      if watching[sender].counter == 0
+      if watching[sender].counter <= 0
         watching[sender].quips.shuffle()
         msg.send watching[sender].quips[0].replace /{msg}/gi, msg.message.text.replace /jarvis\s/i, ''
         
