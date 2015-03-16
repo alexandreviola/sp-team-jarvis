@@ -54,9 +54,10 @@ module.exports = (robot) ->
       watching[sender].counter -= 1
       if watching[sender].counter <= 0
         watching[sender].quips.shuffle()
-        msg.send watching[sender].quips[0].replace /{msg}/gi, msg.message.text.replace /jarvis\s/i, ''
+        quip_to_send = watching[sender].quips[0].replace /{msg}/gi, msg.message.text.replace /jarvis\s/i, ''
+        msg.send quip_to_send
         
-        if quip[0].match /one more command/i
+        if quip_to_send.match /one more command/i
           watching[sender].counter = 1
         else
           next_counter.shuffle()
