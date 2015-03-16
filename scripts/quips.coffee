@@ -55,13 +55,14 @@ module.exports = (robot) ->
       if watching[sender].counter <= 0
         watching[sender].quips.shuffle()
         quip_to_send = watching[sender].quips[0].replace /{msg}/gi, msg.message.text.replace /jarvis\s/i, ''
-        msg.send quip_to_send
         
         if quip_to_send.match /one more command/i
           watching[sender].counter = 1
         else
           next_counter.shuffle()
           watching[sender].counter = next_counter[0]
+          
+        msg.send quip_to_send
 
   robot.respond /how many more quips must we endure for ([a-z0-9_.]+)(\?)?/i, (msg) ->
     sender = msg.message.user.name.toLowerCase()
