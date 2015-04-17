@@ -33,6 +33,6 @@ responses = [
 module.exports = (robot) ->
   robot.hear /(?!(^jarvis))\bjarvis\b/i, (msg) ->
     if msg.message.text.match(COMPLIMENT_PATTERN)
-      msg.send msg.random responses
+      return msg.send msg.random responses
     else
-      msg.send msg.random excuses
+      return msg.send msg.random excuses
