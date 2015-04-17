@@ -23,5 +23,5 @@ excuses = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /\bjarvis\b(?<!^jarvis)/i, (msg) ->
+  robot.hear /\bjarvis\b(?!^jarvis)/i, (msg) ->
     msg.send msg.random excuses
