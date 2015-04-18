@@ -31,7 +31,7 @@ responses = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /(?!(^jarvis))\b@jarvis\b/i, (msg) ->
+  robot.hear /(?!(^jarvis))@jarvis/i, (msg) ->
     if msg.message.text.match(COMPLIMENT_PATTERN)
       return msg.send msg.random responses
     else
