@@ -13,6 +13,7 @@
 # Author:
 #   cpradio
 
+GOODNIGHT_PATTERN = /\b(goodnight|good night|nighty|nightie|)\b/ig
 COMPLIMENT_PATTERN = /\b(good|nice|awesome|great)\b/ig
 excuses = [
   "Sorry, I'm still very alpha, one day I hope to be promoted to beta!",
@@ -32,7 +33,10 @@ responses = [
 
 module.exports = (robot) ->
   robot.hear /(?!(^jarvis))@jarvis/i, (msg) ->
-    if msg.message.text.match(COMPLIMENT_PATTERN)
+    sender = msg.message.user.name.toLowerCase()
+    if msg.message.text.match(GOODNIGHT_PATTERN)
+      return msg.send "Sleep tight @#{sender}, don't let the bed bugs bite."
+    else if msg.message.text.match(COMPLIMENT_PATTERN)
       return msg.send msg.random responses
     else
       return msg.send msg.random excuses
