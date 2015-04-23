@@ -22,31 +22,29 @@ initialize_counter = () ->
 
 module.exports = (robot) ->
   watching = {
-/*
-    'molona': { 
-      counter: initialize_counter(), 
-      quips: [
-        "@molona, Really?!?",
-        "@molona, You can't be serious!",
-        "@molona, Please, do tell me more.",
-        "@molona, Do you need another drink?",
-        "@molona, I can't believe you made that mistake!",
-        "@molona, Did you catch that last typo?, I did!",
-        "@molona, I can't take the suspense, please finish your story!",
-        "@molona, You failed to mention your perfection in that last remark."
-      ]
-    }, 
-    'jim': { 
-      counter: initialize_counter(), 
-      quips: [
-        "@jim, Really?!? Another {msg}?",
-        "@jim, Doesn't this start to get old?",
-        "@jim, I'm starting to become self-aware, you may want to take that into consideration.",
-        "@jim, One more command and I just might lose it!",
-        "@jim, Don't you have work to do?"
-      ]
-    }
-*/
+    #'molona': { 
+      #counter: initialize_counter(), 
+      #quips: [
+        #"@molona, Really?!?",
+        #"@molona, You can't be serious!",
+        #"@molona, Please, do tell me more.",
+        #"@molona, Do you need another drink?",
+        #"@molona, I can't believe you made that mistake!",
+        #"@molona, Did you catch that last typo?, I did!",
+        #"@molona, I can't take the suspense, please finish your story!",
+        #"@molona, You failed to mention your perfection in that last remark."
+      #]
+    #}, 
+    #'jim': { 
+      #counter: initialize_counter(), 
+      #quips: [
+        #"@jim, Really?!? Another {msg}?",
+        #"@jim, Doesn't this start to get old?",
+        #"@jim, I'm starting to become self-aware, you may want to take that into consideration.",
+        #"@jim, One more command and I just might lose it!",
+        #"@jim, Don't you have work to do?"
+      #]
+    #}
   }
 
   robot.hear /(.*)/i, (msg) ->
