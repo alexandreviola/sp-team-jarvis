@@ -22,6 +22,7 @@ initialize_counter = () ->
 
 module.exports = (robot) ->
   watching = {
+/*
     'molona': { 
       counter: initialize_counter(), 
       quips: [
@@ -45,6 +46,7 @@ module.exports = (robot) ->
         "@jim, Don't you have work to do?"
       ]
     }
+*/
   }
 
   robot.hear /(.*)/i, (msg) ->
