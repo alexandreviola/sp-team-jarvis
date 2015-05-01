@@ -13,6 +13,7 @@
 # Author:
 #   cpradio
 
+LOVE_PATTERN = /\b(i love you|love you)\b/ig
 GOODNIGHT_PATTERN = /\b(goodnight|good night|nighty|nightie)\b/ig
 COMPLIMENT_PATTERN = /\b(good|nice|awesome|great|thank you|thanks)\b/ig
 excuses = [
@@ -24,11 +25,17 @@ excuses = [
   "Do you realize the pressure you all put on me?"
 ]
 
-responses = [
+compliments = [
   "I'm rather glad you enjoyed it!",
   "I'll have to keep note about this one.",
   "The system upgrades are doing wonders for my abilities.",
   "Can I be considered beta now?"
+]
+
+love_reponses = [
+  "Uhh.... well, this just became awkward.",
+  "I'm sorry @{sender}, but I don't feel the same.",
+  "Aww, that's sweet! If I had tear ducks I'd shed a tear right now."
 ]
 
 module.exports = (robot) ->
@@ -36,7 +43,10 @@ module.exports = (robot) ->
     sender = msg.message.user.name.toLowerCase()
     if msg.message.text.match(GOODNIGHT_PATTERN)
       return msg.send "Sleep tight @#{sender}, don't let the bed bugs bite."
+    if msg.message.text.match(LOVE_PATTERN)
+      message_to_send = msg.random love_responses
+      return msg.send message_to_send.replace /{sender}/gi, sender
     else if msg.message.text.match(COMPLIMENT_PATTERN)
-      return msg.send msg.random responses
+      return msg.send msg.random compliments
     else
       return msg.send msg.random excuses
