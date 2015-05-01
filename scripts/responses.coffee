@@ -14,7 +14,7 @@
 #   cpradio
 
 GOODNIGHT_PATTERN = /\b(goodnight|good night|nighty|nightie)\b/ig
-COMPLIMENT_PATTERN = /\b(good|nice|awesome|great|thank you)\b/ig
+COMPLIMENT_PATTERN = /\b(good|nice|awesome|great|thank you|thanks)\b/ig
 excuses = [
   "Sorry, I'm still very alpha, one day I hope to be promoted to beta!",
   "D'oh! Lets chalk that off as a system error :wink:",
