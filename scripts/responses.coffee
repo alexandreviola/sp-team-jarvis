@@ -15,7 +15,7 @@
 
 LOVE_PATTERN = /\b(i love you|love you)\b/ig
 GOODNIGHT_PATTERN = /\b(goodnight|good night|nighty|nightie)\b/ig
-COMPLIMENT_PATTERN = /\b(brilliant|good|nice|awesome|great|thank you|thanks)\b/ig
+COMPLIMENT_PATTERN = /\b(you(\w|\s)+rock|brilliant|good|nice|awesome|great|thank you|thanks)\b/ig
 excuses = [
   "Sorry, I'm still very alpha, one day I hope to be promoted to beta!",
   "D'oh! Lets chalk that off as a system error :wink:",
