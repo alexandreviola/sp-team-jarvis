@@ -65,7 +65,7 @@ module.exports = (robot) ->
         if quip_to_send.match /{meme}/i
           quip_to_send = msg.http("https://api.imgflip.com/get_memes")
               .get() (err, res, body) ->
-                memes = JSON.parse(body).memes.shuffle()
+                memes = JSON.parse(body).data.memes.shuffle()
                 memes[0].url
                 
         if quip_to_send.match /one more command/i
