@@ -14,7 +14,7 @@
 #   cpradio
 
 Array::shuffle = -> @sort -> 0.5 - Math.random()
-next_counter = [3..6]
+next_counter = [1..4]
 
 initialize_counter = () ->
   next_counter.shuffle()
@@ -69,7 +69,7 @@ module.exports = (robot) ->
           msg.http("https://api.imgflip.com/get_memes")
               .get() (err, res, body) ->
                 memes = JSON.parse(body).data.memes.shuffle()
-                msg.send memes[0].url
+                msg.send memes[0].url + "\r\n" + memes[0].name
         else
           if quip_to_send.match /one more command/i
             watching[sender].counter = 1
