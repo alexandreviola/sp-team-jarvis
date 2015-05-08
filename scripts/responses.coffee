@@ -33,7 +33,7 @@ compliments = [
   "Can I be considered beta now?"
 ]
 
-love_reponses = [
+love_responses = [
   "Uhh.... well, this just became awkward.",
   "I'm sorry @{sender}, but I don't feel the same.",
   "Aww, that's sweet! If I had tear ducks I'd shed a tear right now."
@@ -53,12 +53,12 @@ module.exports = (robot) ->
     if msg.message.text.match(GREETING_PATTERN)
       message_to_send = msg.random greetings
       return msg.send message_to_send.replace /{sender}/gi, sender
-    else if msg.message.text.match(GOODNIGHT_PATTERN)
+    if msg.message.text.match(GOODNIGHT_PATTERN)
       return msg.send "Sleep tight @#{sender}, don't let the bed bugs bite."
     if msg.message.text.match(LOVE_PATTERN)
       message_to_send = msg.random love_responses
       return msg.send message_to_send.replace /{sender}/gi, sender
-    else if msg.message.text.match(COMPLIMENT_PATTERN)
+    if msg.message.text.match(COMPLIMENT_PATTERN)
       return msg.send msg.random compliments
-    else
-      return msg.send msg.random excuses
+    
+    return msg.send msg.random excuses
