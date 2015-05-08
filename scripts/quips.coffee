@@ -63,10 +63,10 @@ module.exports = (robot) ->
         quip_to_send = watching[sender].quips[0].replace /{msg}/gi, msg.message.text.replace /jarvis\s/i, ''
         
         if quip_to_send.match /{meme}/i
-          msg.http("https://api.imgflip.com/get_memes")
+          quip_to_send = msg.http("https://api.imgflip.com/get_memes")
               .get() (err, res, body) ->
                 memes = JSON.parse(body).memes.shuffle()
-                quip_to_send = memes[0].url
+                memes[0].url
                 
         if quip_to_send.match /one more command/i
           watching[sender].counter = 1
