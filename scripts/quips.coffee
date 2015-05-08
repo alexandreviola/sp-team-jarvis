@@ -22,8 +22,8 @@ initialize_counter = () ->
 
 module.exports = (robot) ->
   watching = {
-    'cpradio': {
-      counter: 1,
+    'ralphmason': {
+      counter: initialize_counter(),
       quips: [
           "{meme}"
         ]
@@ -63,18 +63,21 @@ module.exports = (robot) ->
         quip_to_send = watching[sender].quips[0].replace /{msg}/gi, msg.message.text.replace /jarvis\s/i, ''
         
         if quip_to_send.match /{meme}/i
-          msg.http("https://api.imgflip.com/get_memes")
-              .get() (err, res, body) ->
-                memes = JSON.parse(body).data.memes.shuffle()
-                quip_to_send = memes[0].url
-                
-        if quip_to_send.match /one more command/i
-          watching[sender].counter = 1
-        else
           next_counter.shuffle()
           watching[sender].counter = next_counter[0]
           
-        msg.send quip_to_send
+          msg.http("https://api.imgflip.com/get_memes")
+              .get() (err, res, body) ->
+                memes = JSON.parse(body).data.memes.shuffle()
+                msg.send memes[0].url
+        else
+          if quip_to_send.match /one more command/i
+            watching[sender].counter = 1
+          else
+            next_counter.shuffle()
+            watching[sender].counter = next_counter[0]
+            
+          msg.send quip_to_send
 
   robot.respond /how many more quips must we endure for ([a-z0-9_.]+)(\?)?/i, (msg) ->
     sender = msg.message.user.name.toLowerCase()
