@@ -13,7 +13,7 @@
 # Author:
 #   cpradio
 
-GREETING_PATTERN = /\b(hi|hello|howdy)\b/ig
+GREETING_PATTERN = /\b(hi|hello|howdy|hey)\b/ig
 LOVE_PATTERN = /\b(i love you|love you)\b/ig
 GOODNIGHT_PATTERN = /\b(goodnight|good night|nighty|nightie)\b/ig
 COMPLIMENT_PATTERN = /\b(you(\w|\s)+rock|brilliant|good|nice|awesome|great|thank you|thanks|excellent)\b/ig
