@@ -79,7 +79,7 @@ module.exports = (robot) ->
             
           msg.send quip_to_send
 
-  robot.respond /how many more quips must we endure for ([a-z0-9_.]+)(\?)?/i, (msg) ->
+  robot.respond /how many more quips must we endure for @?([a-z0-9_.]+)(\?)?/i, (msg) ->
     sender = msg.message.user.name.toLowerCase()
     user = msg.match[1]
     if user of watching
