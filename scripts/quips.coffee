@@ -22,6 +22,12 @@ initialize_counter = () ->
 
 module.exports = (robot) ->
   watching = {
+    'cpradio': {
+      counter: 1,
+      quips: [
+          "{meme}"
+        ]
+    }
     #'molona': { 
       #counter: initialize_counter(), 
       #quips: [
@@ -56,6 +62,12 @@ module.exports = (robot) ->
         watching[sender].quips.shuffle()
         quip_to_send = watching[sender].quips[0].replace /{msg}/gi, msg.message.text.replace /jarvis\s/i, ''
         
+        if quip_to_send.match /{meme}/i
+          msg.http("https://api.imgflip.com/get_memes")
+              .get() (err, res, body) ->
+                memes = JSON.parse(body).memes.shuffle()
+                quip_to_send = memes[0].url
+                
         if quip_to_send.match /one more command/i
           watching[sender].counter = 1
         else
@@ -71,3 +83,4 @@ module.exports = (robot) ->
       msg.send "Sorry @#{sender}, but you'll have to endure #{watching[user].counter} more quips from #{user} before I step in."
     else
       msg.send "@#{sender}, I do not have any record of #{user}."
+      
