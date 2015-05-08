@@ -13,6 +13,7 @@
 # Author:
 #   cpradio
 
+GREETING_PATTERN = /\b(hi|hello|howdy)\b/ig
 LOVE_PATTERN = /\b(i love you|love you)\b/ig
 GOODNIGHT_PATTERN = /\b(goodnight|good night|nighty|nightie)\b/ig
 COMPLIMENT_PATTERN = /\b(you(\w|\s)+rock|brilliant|good|nice|awesome|great|thank you|thanks|excellent)\b/ig
@@ -38,10 +39,21 @@ love_reponses = [
   "Aww, that's sweet! If I had tear ducks I'd shed a tear right now."
 ]
 
+greetings = [
+  "Hi @{sender}, how are you this fine day?",
+  "What can I do for you @{sender}?"
+  #"Hello Clarice"
+]
+
 module.exports = (robot) ->
   robot.hear /(?!(^jarvis))@jarvis/i, (msg) ->
     sender = msg.message.user.name.toLowerCase()
-    if msg.message.text.match(GOODNIGHT_PATTERN)
+    if msg.message.text.match(/^@jarvis(\s*)?$/gi)
+      return msg.send "How may I be of service, @#{sender}?"
+    if msg.message.text.match(GREETING_PATTERN)
+      message_to_send = msg.random greetings
+      return msg.send message_to_send.replace /{sender}/gi, sender
+    else if msg.message.text.match(GOODNIGHT_PATTERN)
       return msg.send "Sleep tight @#{sender}, don't let the bed bugs bite."
     if msg.message.text.match(LOVE_PATTERN)
       message_to_send = msg.random love_responses
