@@ -65,7 +65,7 @@ module.exports = (robot) ->
     if msg.message.text.match(GOODNIGHT_PATTERN)
       return msg.send "Sleep tight @#{sender}, don't let the bed bugs bite."
     if msg.message.text.match(HANG_TEN_PATTERN)
-      message_to_send = msg.random hang_ten_responses
+      return msg.send msg.random hang_ten_responses
     if msg.message.text.match(LOVE_PATTERN)
       message_to_send = msg.random love_responses
       return msg.send message_to_send.replace /{sender}/gi, sender
