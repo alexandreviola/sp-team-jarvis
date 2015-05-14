@@ -16,13 +16,13 @@
 #   dstrelau
 
 module.exports = (robot) ->
-  robot.respond /kittens?(?: me)?$/i, (msg) ->
+  robot.respond /(kitten|cat)s?(?: me)?$/i, (msg) ->
     msg.send kittenMe()
 
-  robot.respond /kittens?(?: me)? (\d+)(?:[x ](\d+))?$/i, (msg) ->
+  robot.respond /(kitten|cat)s?(?: me)? (\d+)(?:[x ](\d+))?$/i, (msg) ->
     msg.send kittenMe msg.match[1], (msg.match[2] || msg.match[1])
 
-  robot.respond /kitten bomb(?: me)?( \d+)?$/i, (msg) ->
+  robot.respond /(kitten|cat) bomb(?: me)?( \d+)?$/i, (msg) ->
     kittens = msg.match[1] || 5
     msg.send(kittenMe()) for i in [1..kittens]
 
