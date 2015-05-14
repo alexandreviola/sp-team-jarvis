@@ -17,6 +17,8 @@ GREETING_PATTERN = /\b(hi|hello|howdy|hey)\b/ig
 LOVE_PATTERN = /\b(i love you|love you)\b/ig
 GOODNIGHT_PATTERN = /\b(goodnight|good night|nighty|nightie)\b/ig
 COMPLIMENT_PATTERN = /\b(you(\w|\s)+rock|brilliant|good|nice|awesome|great|thank you|thanks|excellent)\b/ig
+HANG_TEN_PATTERN = /\b(cool|dude|righteous|radical|gnarly)\b/ig
+
 excuses = [
   "Sorry, I'm still very alpha, one day I hope to be promoted to beta!",
   "D'oh! Lets chalk that off as a system error :wink:",
@@ -45,6 +47,13 @@ greetings = [
   #"Hello Clarice"
 ]
 
+hang_ten_responses = [
+  "No problemo mmmaaaannn!",
+  "Wasn't that way cool?",
+  "like totally worth it, am I right?",
+  "cowabunga!"
+]
+
 module.exports = (robot) ->
   robot.hear /(?!(^jarvis))@jarvis/i, (msg) ->
     sender = msg.message.user.name.toLowerCase()
@@ -55,6 +64,8 @@ module.exports = (robot) ->
       return msg.send message_to_send.replace /{sender}/gi, sender
     if msg.message.text.match(GOODNIGHT_PATTERN)
       return msg.send "Sleep tight @#{sender}, don't let the bed bugs bite."
+    if msg.message.text.match(HANG_TEN_PATTERN)
+      message_to_send = msg.random hang_ten_responses
     if msg.message.text.match(LOVE_PATTERN)
       message_to_send = msg.random love_responses
       return msg.send message_to_send.replace /{sender}/gi, sender
