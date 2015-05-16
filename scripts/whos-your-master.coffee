@@ -21,10 +21,10 @@ responses = {
 }
 
 module.exports = (robot) ->
-  robot.respond /who's your master\?$/i, (msg) ->
+  robot.respond /who's (the master|your master|the boss|your boss)\?$/i, (msg) ->
     masterMe msg
     
-  robot.respond /who is your master\?$/i, (msg) ->
+  robot.respond /who is (the master|your master|the boss|your boss)\?$/i, (msg) ->
     masterMe msg
 
 masterMe = (msg) ->
