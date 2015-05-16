@@ -21,14 +21,11 @@ responses = {
 }
 
 module.exports = (robot) ->
-  robot.respond /who's (the|your) (master|boss)\?$/i, (msg) ->
-    masterMe msg
-    
-  robot.respond /who is (the|your) (master|boss)\?$/i, (msg) ->
+  robot.respond /who('s| is) (the|your) (master|boss)\?$/i, (msg) ->
     masterMe msg
 
 masterMe = (msg) ->
-    term = msg.match[2]
+    term = msg.match[3]
     sender = msg.message.user.name.toLowerCase()
     if sender of responses
       msg.send responses[sender].replace /{term}/, term
