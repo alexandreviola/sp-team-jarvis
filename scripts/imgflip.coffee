@@ -29,9 +29,10 @@
 #   hubot <text> and it's gone - South Park Banker Guy
 #   hubot <text> nobody bats an eye <text> everyone loses their minds - Heath Ledger Joker
 #   hubot back in my day <text> - Grumpy old man
+#   hubot <text> they said, <text> they said - Laundry Viking
 #
 # Author:
-#   dylanwenzlau
+#   dylanwenzlau and cpradio
 
 
 inspect = require('util').inspect
@@ -118,6 +119,10 @@ module.exports = (robot) ->
       {
         regex: /(back in my day) (.*)/i,
         template_id: 718432
+      },
+      {
+        regex: /(.* they said), (.* they said)/i,
+        template_id: 36986734
       }
     ]
 
