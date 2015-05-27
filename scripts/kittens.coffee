@@ -19,10 +19,10 @@ module.exports = (robot) ->
   robot.respond /(kitten|cat)s?(?: me)?$/i, (msg) ->
     msg.send kittenMe()
 
-  robot.respond /(kitten|cat)s?(?: me)? (\d+)(?:[x ](\d+))?$/i, (msg) ->
+  robot.respond /(kitten|cat)s?(?: me)? (\d+)(?:[x ])?(\d+)$/i, (msg) ->
     msg.send kittenMe msg.match[2], (msg.match[3] || msg.match[4])
 
-  robot.respond /(kitten|cat) bomb(?: me)?\s?(\d+)?$/i, (msg) ->
+  robot.respond /(kitten|cat) bomb(?: me)?( \d+)?$/i, (msg) ->
     kittens = msg.match[2] || 5
     msg.send(kittenMe()) for i in [1..kittens]
 
