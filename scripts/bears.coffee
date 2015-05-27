@@ -31,4 +31,4 @@ bearMe = (height, width)->
   w = width  || Math.floor(Math.random()*250) + 250
   root = "http://placebear.com"
   root += "/g" if Math.random() > 0.5 # greyscale bears!
-  return "#{root}/#{h}/#{w}#.png"
+  return "#{root}/#{h}/#{w}"
