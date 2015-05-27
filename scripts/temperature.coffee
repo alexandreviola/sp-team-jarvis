@@ -17,19 +17,19 @@
 #   cpradio
 
 module.exports = (robot) ->
-  robot.respond /convert ([\d]+) to C$/i, (msg) ->
+  robot.respond /convert (-?[\d]+) to C$/i, (msg) ->
     degree = msg.match[1]
     convertToC(msg, degree)
     
-  robot.respond /convert ([\d]+)C$/i, (msg) ->
+  robot.respond /convert (-?[\d]+)C$/i, (msg) ->
     degree = msg.match[1]
     convertToF(msg, degree)
 
-  robot.respond /convert ([\d]+) to F$/i, (msg) ->
+  robot.respond /convert (-?[\d]+) to F$/i, (msg) ->
     degree = msg.match[1]
     convertToF(msg, degree)
 
-  robot.respond /convert ([\d]+)F$/i, (msg) ->
+  robot.respond /convert (-?[\d]+)F$/i, (msg) ->
     degree = msg.match[1]
     convertToC(msg, degree)
 
