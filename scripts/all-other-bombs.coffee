@@ -8,7 +8,6 @@
 #   None
 # 
 # Commands:
-#   hubot <text> me - A randomly selected <text>
 #   hubot <text> bomb me <number> - Many many <text>s!
 #
 # Author:
