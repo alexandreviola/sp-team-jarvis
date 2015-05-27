@@ -53,7 +53,7 @@ module.exports = (robot) ->
         template_id: 101470
       },
       {
-        regex: /grumpy cat ()(.*)/i,
+        regex: /grumpy cat (.*)[,.] (.*)/i,
         template_id: 405658
       },
       {
