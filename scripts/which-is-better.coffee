@@ -14,7 +14,17 @@
 # Author:
 #   cpradio
 
+uhh_what = [
+    "I could tell you, but then I'd have to kill you",
+    "Answering that would be a matter of national security",
+    "You can't possibly compare them!",
+    "Both hold a special place in my heart"
+  ]
+
 module.exports = (robot) ->
   robot.respond /which is (better|worse)\?* (.*) or (.*?)\??$/i, (msg) ->
-    option_choosen = msg.random [2,3]
-    msg.send "Clearly #{msg.match[option_choosen]} is #{msg.match[1]}"
+    choosen_response = msg.random [1...5]
+    if choosen_response >= 3
+      msg.send msg.random uhh_what
+    else
+      msg.send "Clearly #{msg.match[choosen_response + 1]} is #{msg.match[1]}"
