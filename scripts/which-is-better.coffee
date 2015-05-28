@@ -23,7 +23,7 @@ uhh_what = [
 
 module.exports = (robot) ->
   robot.respond /which is (better|worse)\?* (.*) or (.*?)\??$/i, (msg) ->
-    choosen_response = msg.random [1...5]
+    choosen_response = msg.random [1..5]
     if choosen_response >= 3
       msg.send msg.random uhh_what
     else
