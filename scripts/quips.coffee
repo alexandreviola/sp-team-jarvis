@@ -22,12 +22,12 @@ initialize_counter = () ->
 
 module.exports = (robot) ->
   watching = {
-    'ralphmason': {
-      counter: initialize_counter(),
-      quips: [
-          "{meme}"
-        ]
-    }
+    #'ralphmason': {
+      #counter: initialize_counter(),
+      #quips: [
+          #"{meme}"
+        #]
+    #}
     #'molona': { 
       #counter: initialize_counter(), 
       #quips: [

@@ -14,15 +14,13 @@
 #   cpradio
 
 responses = [
-  "www.youtube.com/watch?v=jofNR_WkoCE",
   "Ring-ding-ding-ding-dingeringeding!",
   "Wa-pa-pa-pa-pa-pa-pow!",
   "Joff-tchoff-tchoff-tchoffo-tchoffo-tchoff!",
   "Jacha-chacha-chacha-chow!",
   "Fraka-kaka-kaka-kaka-kow!",
   "A-hee-ahee ha-hee!",
-  "A-oo-oo-oo-ooo!",
-  "www.youtube.com/watch?v=foMQX9ZExsE"
+  "A-oo-oo-oo-ooo!"
 ]
 
 module.exports = (robot) ->
