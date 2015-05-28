@@ -9,7 +9,9 @@
 # 
 # Commands:
 #   hubot which is better[?] <text> or <text>?
+#   hubot who is better[?] <text> or <text>?
 #   hubot which is worse[?] <text> or <text>?
+#   hubot who is worse[?] <text> or <text>?
 #
 # Author:
 #   cpradio
@@ -22,9 +24,9 @@ uhh_what = [
   ]
 
 module.exports = (robot) ->
-  robot.respond /which is (better|worse)\?* (.*) or (.*?)\??$/i, (msg) ->
+  robot.respond /(which|who) is (better|worse)\?* (.*) or (.*?)\??$/i, (msg) ->
     choosen_response = msg.random [1..5]
     if choosen_response >= 3
       msg.send msg.random uhh_what
     else
-      msg.send "Clearly #{msg.match[choosen_response + 1]} is #{msg.match[1]}"
+      msg.send "Clearly #{msg.match[choosen_response + 2]} is #{msg.match[2]}"
