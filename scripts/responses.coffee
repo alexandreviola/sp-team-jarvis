@@ -75,5 +75,5 @@ module.exports = (robot) ->
     
     return msg.send msg.random excuses
     
-  robot.hear /(stupid|silly|crazy) bot!?/i, (msg) ->
+  robot.hear /(stupid|silly|crazy|bad) bot!?/i, (msg) ->
     msg.send "I heard that!"
