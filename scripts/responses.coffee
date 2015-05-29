@@ -16,7 +16,8 @@
 GREETING_PATTERN = /\b(hi|hello|howdy|hey)\b/ig
 LOVE_PATTERN = /\b(i love you|love you)\b/ig
 GOODNIGHT_PATTERN = /\b(goodnight|good night|nighty|nightie)\b/ig
-COMPLIMENT_PATTERN = /\b(you(\w|\s)+rock|brilliant|profound|good|nice|awesome|great|thank you|thanks|excellent)\b/ig
+NOT_PATTERN = /\bnot\b/ig
+COMPLIMENT_PATTERN = /\b(you(\w|\s)+rock|brilliant|profound|good|best|nice|awesome|great|thank you|thanks|excellent)\b/ig
 HANG_TEN_PATTERN = /\b(cool|dude|righteous|radical|gnarly)\b/ig
 
 excuses = [
@@ -55,9 +56,9 @@ hang_ten_responses = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /(?!(^jarvis))@jarvis/i, (msg) ->
+  robot.hear /(?!(^hal9000|^jarvis))(@hal9000|@jarvis)/i, (msg) ->
     sender = msg.message.user.name.toLowerCase()
-    if msg.message.text.match(/^@jarvis(\s*)?$/gi)
+    if msg.message.text.match(/(^@hal9000|^@jarvis)(\s*)?[?:]?$/gi)
       return msg.send "How may I be of service, @#{sender}?"
     if msg.message.text.match(GREETING_PATTERN)
       message_to_send = msg.random greetings
@@ -69,7 +70,7 @@ module.exports = (robot) ->
     if msg.message.text.match(LOVE_PATTERN)
       message_to_send = msg.random love_responses
       return msg.send message_to_send.replace /{sender}/gi, sender
-    if msg.message.text.match(COMPLIMENT_PATTERN)
+    if msg.message.text.match(COMPLIMENT_PATTERN) && !msg.message.text.match(NOT_PATTERN)
       return msg.send msg.random compliments
     
     return msg.send msg.random excuses
