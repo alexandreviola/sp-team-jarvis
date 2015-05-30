@@ -21,7 +21,7 @@ responses = {
 }
 
 module.exports = (robot) ->
-  robot.respond /who('s| is) (the|your) (master|boss)\?$/i, (msg) ->
+  robot.respond /who('s| is) (the|your) (master|boss)\??$/i, (msg) ->
     masterMe msg
 
 masterMe = (msg) ->
