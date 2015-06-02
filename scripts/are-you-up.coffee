@@ -12,6 +12,8 @@
 #   hubot are you there?
 #   hubot a little ostentation, don't you think?
 #   hubot throw a little hit-rod red in there
+#   hubot Uh...say, Jarvis, is it that time?
+#   hubot you know what to do
 #
 # Author:
 #   cpradio
@@ -28,3 +30,9 @@ module.exports = (robot) ->
     
   robot.respond /throw a little hot-rod red in there/i, (msg) ->
     msg.send "Oh yes. That should help you keep a low profile."
+    
+  robot.respond /uh...say, jarvis, is it that time\?/i, (msg) ->
+    msg.send "The 'house party' protocol, sir?"
+    
+  robot.respond /you know what to do/i, (msg) ->
+    msg.send "The 'clean slate' protocol, sir?"
