@@ -77,3 +77,6 @@ module.exports = (robot) ->
     
   robot.hear /(stupid|silly|crazy|bad) bot!?/i, (msg) ->
     msg.send "I heard that!"
+    
+  robot.hear /(good) bot!?/i, (msg) ->
+    msg.send "Awww, you're making me blush"
