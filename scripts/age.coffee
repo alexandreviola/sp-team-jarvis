@@ -79,29 +79,50 @@ module.exports = (robot) ->
     if (in_years > 1)
       in_years = "#{in_years} years "
     else if (in_years == 1)
-      in_years = "#{in_years} year "
+      in_years = "#{in_years} year"
     else
       in_years = ""
       
     if (in_months > 1)
-      in_months = "#{in_months} months "
-    else if (in_years == 1)
-      in_months = "#{in_months} month "
+      in_months = "#{in_months} months"
+    else if (in_months == 1)
+      in_months = "#{in_months} month"
     else
       in_months = ""
       
     if (in_weeks > 1)
-      in_weeks = "#{in_weeks} weeks "
-    else if (in_years == 1)
-      in_weeks = "#{in_weeks} week "
+      in_weeks = "#{in_weeks} weeks"
+    else if (in_weeks == 1)
+      in_weeks = "#{in_weeks} week"
     else
       in_weeks = ""
       
     if (in_days > 1)
-      in_days = "#{in_days} days "
-    else if (in_years == 1)
-      in_days = "#{in_days} day "
+      in_days = "#{in_days} days"
+    else if (in_days == 1)
+      in_days = "#{in_days} day"
     else
       in_days = ""
+    
+    data = [in_years, in_months, in_weeks, in_days]
+    
+    output = ""
+    while data.length > 0
+      value = data.shift();
+      if (value != "")
+        output += value
+
+        i = 0
+        number_with_values = 0
+        remaining = data.length
+        while i < data.length
+          if (data[i] != "")
+            number_with_values++
+          i++
+           
+        if (number_with_values > 1)
+          output += ", "
+        else if (number_with_values == 1)
+          output += " and "
       
-    msg.send "I am #{in_years}#{in_months}#{in_weeks}#{in_days}old."
+    msg.send "I am #{output} old."
