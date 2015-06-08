@@ -30,6 +30,7 @@
 #   hubot <text> nobody bats an eye <text> everyone loses their minds - Heath Ledger Joker
 #   hubot back in my day <text> - Grumpy old man
 #   hubot <text> they said, <text> they said - Laundry Viking
+#   hubot no <text> for you! - Soup Nazi
 #
 # Author:
 #   dylanwenzlau and cpradio
@@ -123,6 +124,10 @@ module.exports = (robot) ->
       {
         regex: /(.* they said), (.* they said)/i,
         template_id: 36986734
+      },
+      { 
+        regex: /(no .* for you!)/i,
+        template_id: 10585695
       }
     ]
 
