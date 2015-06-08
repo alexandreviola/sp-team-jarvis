@@ -13,11 +13,11 @@
 # Author:
 #   cpradio
 
-responses = {
+responses = [
   "bock, bock, bock, bock, bock, begowwwwk",
   "cockadoodle dooooooooooooooooooooooooooo",
   "brrk, brroock, broock, brk-ooock"
-}
+]
 
 module.exports = (robot) ->
   robot.hear /chicken parm/i, (msg) ->
