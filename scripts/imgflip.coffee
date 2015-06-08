@@ -126,7 +126,7 @@ module.exports = (robot) ->
         template_id: 36986734
       },
       { 
-        regex: /(no .* for you!)/i,
+        regex: /()(no .* for you!)/i,
         template_id: 10585695
       }
     ]
