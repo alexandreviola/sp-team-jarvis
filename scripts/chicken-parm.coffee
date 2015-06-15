@@ -22,5 +22,5 @@ responses = [
 module.exports = (robot) ->
   robot.hear /chicken(\s)+parm/i, (msg) ->
     sender = msg.message.user.name.toLowerCase()
-    if sender == 'ryanreese09'
+    if sender.indexof('ryanreese') > -1
       msg.send msg.random responses
