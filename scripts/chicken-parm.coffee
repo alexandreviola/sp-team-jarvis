@@ -20,7 +20,7 @@ responses = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /chicken parm/i, (msg) ->
+  robot.hear /chicken(\s)+parm/i, (msg) ->
     sender = msg.message.user.name.toLowerCase()
     if sender == 'ryanreese09'
       msg.send msg.random responses
