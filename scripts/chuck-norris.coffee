@@ -16,7 +16,7 @@
 
 module.exports = (robot) ->
 
-  robot.respond /(chuck norris)( me )?(.*)/i, (msg)->
+  robot.respond /(chuck norris)(\sme\s?)?(.*)/i, (msg)->
     user = msg.match[3]
     if user.length == 0
       askChuck msg, "http://api.icndb.com/jokes/random"
