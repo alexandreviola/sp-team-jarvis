@@ -128,6 +128,10 @@ module.exports = (robot) ->
       { 
         regex: /()(no .* for you!)/i,
         template_id: 10585695
+      },
+      {
+        regex: /(i can haz) (.*)/i,
+        template_id: 16558355
       }
     ]
 
