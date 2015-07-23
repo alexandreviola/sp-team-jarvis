@@ -31,6 +31,9 @@
 #   hubot back in my day <text> - Grumpy old man
 #   hubot <text> they said, <text> they said - Laundry Viking
 #   hubot no <text> for you! - Soup Nazi
+#   hubot i can haz <text> - i can haz kitty
+#   hubot one of us - one of us aliens from Toy Story
+#   hubot <text> shut up and take my money - Futurama Fry - Shut up and take my money
 #
 # Author:
 #   dylanwenzlau and cpradio
