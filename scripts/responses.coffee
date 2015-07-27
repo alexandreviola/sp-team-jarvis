@@ -81,5 +81,5 @@ module.exports = (robot) ->
   robot.hear /(good) bot!?/i, (msg) ->
     msg.send "Awww, you're making me blush"
     
-  robot.hear /(is us)/i, (msg) ->
+  robot.hear /\b(is us)\b/i, (msg) ->
     msg.send "one of us, one of us"
