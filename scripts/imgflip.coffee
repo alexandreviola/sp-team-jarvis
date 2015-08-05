@@ -34,6 +34,7 @@
 #   hubot i can haz <text> - i can haz kitty
 #   hubot one of us - one of us aliens from Toy Story
 #   hubot <text> shut up and take my money - Futurama Fry - Shut up and take my money
+#   hubot this is <text> - Sparta - This is Sparta!
 #
 # Author:
 #   dylanwenzlau and cpradio
@@ -145,7 +146,7 @@ module.exports = (robot) ->
         template_id: 176908
       },
       {
-        regex: /()(this is .* )/i,
+        regex: /()(this is .*)/i,
         template_id: 4607993
       }
     ]
