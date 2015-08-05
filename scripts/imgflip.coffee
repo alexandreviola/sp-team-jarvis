@@ -143,6 +143,10 @@ module.exports = (robot) ->
       {
         regex: /(.* )?(shut up and take my money)/i,
         template_id: 176908
+      },
+      {
+        regex: /()(this is .* )/i,
+        template_id: 4607993
       }
     ]
 
