@@ -46,6 +46,10 @@ module.exports = (robot) ->
   unless robot.brain.data.imgflip_memes?
     robot.brain.data.imgflip_memes = [
       {
+        regex: /(i pity the fool) (.*)/i,
+        template_id: 1570716
+      },
+      {
         regex: /(one does not simply) (.*)/i,
         template_id: 61579
       },
