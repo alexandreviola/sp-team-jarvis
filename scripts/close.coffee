@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   soon - Display a no cigar image (allows for many Os)
+#   soon - Display a no cigar image
 #
 # Author:
 #   keithamus
