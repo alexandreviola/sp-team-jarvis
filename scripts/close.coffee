@@ -8,10 +8,10 @@
 #   None
 #
 # Commands:
-#   soon - Display a no cigar image
+#   close - Display a no cigar image
 #
 # Author:
-#   keithamus
+#   jeffreylees
 
 images = [
   "http://i.imgur.com/W8skjnc.jpg"
