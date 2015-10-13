@@ -1,5 +1,5 @@
 # Description:
-#   None
+#   Wiki Me!
 #
 # Dependencies:
 #   "htmlparser": "1.7.6"

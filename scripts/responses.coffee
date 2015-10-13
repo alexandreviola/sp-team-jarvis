@@ -39,7 +39,7 @@ compliments = [
 love_responses = [
   "Uhh.... well, this just became awkward.",
   "I'm sorry @{sender}, but I don't feel the same.",
-  "Aww, that's sweet! If I had tear ducks I'd shed a tear right now."
+  "Aww, that's sweet! If I had tear ducts I'd shed a tear right now."
 ]
 
 greetings = [
@@ -72,14 +72,14 @@ module.exports = (robot) ->
       return msg.send message_to_send.replace /{sender}/gi, sender
     if msg.message.text.match(COMPLIMENT_PATTERN) && !msg.message.text.match(NOT_PATTERN)
       return msg.send msg.random compliments
-    
+
     return msg.send msg.random excuses
-    
+
   robot.hear /(stupid|silly|crazy|bad) bot!?/i, (msg) ->
     msg.send "I heard that!"
-    
+
   robot.hear /(good) bot!?/i, (msg) ->
     msg.send "Awww, you're making me blush"
-    
+
   robot.hear /\b(is us|one of us)\b/i, (msg) ->
     msg.send "one of us, one of us"

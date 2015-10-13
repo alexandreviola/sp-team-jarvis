@@ -1,12 +1,12 @@
 # Description:
-#   Temperature Calculations
+#   What does the Fox say?
 #
 # Dependencies:
 #   None
 #
 # Configuration:
 #   None
-# 
+#
 # Commands:
 #   hubot what does the fox say?
 #

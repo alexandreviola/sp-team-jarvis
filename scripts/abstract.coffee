@@ -1,5 +1,5 @@
 # Description:
-#   None
+#   Abstract Retrieval from Duck Duck Go
 #
 # Dependencies:
 #   None
