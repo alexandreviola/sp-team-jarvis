@@ -15,10 +15,11 @@
 
 responses = [
   "BOOM! HEADSHOT!!",
-  "_cpradio_ shoots Ryan in the foot!",
+  "_cpradio_ shoots {user} in the foot!",
   "Shouldn't you be working instead of playing your 'little' game?"
 ]
 
 module.exports = (robot) ->
   robot.hear /\b(cs:?go|counter\s?strike)\b/i, (msg) ->
-    msg.send msg.random responses
+    responses.shuffle()
+    msg.send responses[0].replace /{user}/gi, msg.message.user.name
