@@ -35,6 +35,8 @@
 #   hubot one of us - one of us aliens from Toy Story
 #   hubot <text> shut up and take my money - Futurama Fry - Shut up and take my money
 #   hubot this is <text> - Sparta - This is Sparta!
+#   hubot <text>, you keep using that word. <text> - You Keep Using That Word meme
+#   hubot my name is inigo montoya, you <text>, prepare to die! - Prepare to Die meme
 #
 # Author:
 #   dylanwenzlau and cpradio
@@ -133,7 +135,7 @@ module.exports = (robot) ->
         regex: /(.* they said), (.* they said)/i,
         template_id: 36986734
       },
-      { 
+      {
         regex: /()(no .* for you!)/i,
         template_id: 10585695
       },
@@ -152,6 +154,14 @@ module.exports = (robot) ->
       {
         regex: /()(this is .*)/i,
         template_id: 4607993
+      },
+      {
+        regex: /((.*), you keep using that word.?) (.*)/i,
+        template_id: 10453954
+      },
+      {
+        regex: /(my name is inigo montoya,?) (you (,*),? prepare to die!?)/i,
+        template_id: 10453954
       }
     ]
 
