@@ -19,4 +19,5 @@ images = [
 
 module.exports = (robot) ->
   robot.hear /\bclose\b/i, (msg) ->
-    msg.send msg.random images
+    if !/\bissues close\b/i.test msg.message.rawText
+      msg.send msg.random images
