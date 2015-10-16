@@ -156,7 +156,7 @@ module.exports = (robot) ->
         template_id: 4607993
       },
       {
-        regex: /(.*, you keep using that word.?) (.*)/i,
+        regex: /(.*,? you keep using that word.?,?) (.*)/i,
         template_id: 10453954
       },
       {
