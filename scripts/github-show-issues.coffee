@@ -49,11 +49,11 @@ ASK_REGEX = ///
 parse_criteria = (message) ->
   [me, limit, assignee, label, repo, query] = message.match(ASK_REGEX)[1..]
   me: me,
-  limit: parseInt limit.replace(" of", "") if limit?,
-    assignee: assignee.replace("'s", "") if assignee?,
-      label: label,
-      repo: repo.replace("for ", "") if repo?,
-        query: query.replace("about ", "") if query?
+  limit: parseInt limit.replace(" of", "") if limit?
+  assignee: assignee.replace("'s", "") if assignee?
+  label: label,
+  repo: repo.replace("for ", "") if repo?
+  query: query.replace("about ", "") if query?
 
 # Filter the issue list by criteria; most of the filtering is handled as part
 # of the Issues API, but limit and query paramaters are not part of the API.
