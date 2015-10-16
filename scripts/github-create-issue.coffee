@@ -31,7 +31,7 @@ module.exports = (robot) ->
     user = res.envelope.user.name
     payload = {}
     payload.title = res.match[1].trim()
-    payload.body = (res.match[3]) ? res.match[3].trim() + "\r\n\r\n_submitted by #{user}_" : "_submitted by #{user}_"
+    payload.body = if res.match[3] then res.match[3].trim() + "\r\n\r\n_submitted by #{user}_" else "_submitted by #{user}_"
     url  = "/repos/#{repo}/issues"
 
     createIssue = (github, payload) ->
