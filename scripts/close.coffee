@@ -19,5 +19,5 @@ images = [
 
 module.exports = (robot) ->
   robot.hear /\bclose\b/i, (msg) ->
-    if !/\bissues close\b/i.test msg.message.rawText
+    if !/\bissues close #?([0-9]+)\b/i.test msg.message.rawText
       msg.send msg.random images
