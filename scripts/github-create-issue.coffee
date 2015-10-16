@@ -26,12 +26,12 @@ module.exports = (robot) ->
   parseBody = (rawBody) ->
     if rawBody then rawBody.slice(2).trim() else rawBody
 
-  robot.respond /new issue (.*)/i, (res) ->
+  robot.respond /new issue (.*): (.*)/i, (res) ->
     repo = githubot.qualified_repo process.env.HUBOT_GITHUB_REPO
     user = res.envelope.user.name
     payload = {}
     payload.title = res.match[1].trim()
-    payload.body = "_submitted by #{user}_"
+    payload.body = res.match[2].trim() + "\r\n\r\n_submitted by #{user}_"
     url  = "/repos/#{repo}/issues"
 
     createIssue = (github, payload) ->
@@ -46,12 +46,12 @@ module.exports = (robot) ->
       else
         createIssue(githubot(robot, token: token), payload)
 
-  robot.respond /new issue (.*): (.*)/i, (res) ->
+  robot.respond /new issue (.*)/i, (res) ->
     repo = githubot.qualified_repo process.env.HUBOT_GITHUB_REPO
     user = res.envelope.user.name
     payload = {}
     payload.title = res.match[1].trim()
-    payload.body = res.match[2].trim() + "\r\n\r\n_submitted by #{user}_"
+    payload.body = "_submitted by #{user}_"
     url  = "/repos/#{repo}/issues"
 
     createIssue = (github, payload) ->
