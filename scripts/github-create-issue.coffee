@@ -28,10 +28,31 @@ module.exports = (robot) ->
 
   robot.respond /new issue (.*)/i, (res) ->
     repo = githubot.qualified_repo process.env.HUBOT_GITHUB_REPO
+    user = res.envelope.user.name
     payload = {}
     payload.title = res.match[1].trim()
+    payload.body = "_submitted by #{user}_"
     url  = "/repos/#{repo}/issues"
+
+    createIssue = (github, payload) ->
+      github.post url, payload, (issue) ->
+        res.reply "I've opened the issue ##{issue.number} for #{user} (#{issue.html_url})"
+
+    return createIssue(githubot(robot), payload) unless useIdentity
+
+    robot.identity.findToken user, (err, token) ->
+      if err
+        handleTokenError(res, err)
+      else
+        createIssue(githubot(robot, token: token), payload)
+
+  robot.respond /new issue (.*): (.*)/i, (res) ->
+    repo = githubot.qualified_repo process.env.HUBOT_GITHUB_REPO
     user = res.envelope.user.name
+    payload = {}
+    payload.title = res.match[1].trim()
+    payload.body = res.match[2].trim() + "\r\n\r\n_submitted by #{user}_"
+    url  = "/repos/#{repo}/issues"
 
     createIssue = (github, payload) ->
       github.post url, payload, (issue) ->

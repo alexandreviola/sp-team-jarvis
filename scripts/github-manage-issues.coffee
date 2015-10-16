@@ -60,10 +60,10 @@ module.exports = (robot) ->
 
   robot.respond /issues comment #?([0-9]+) (.*)$/i, (res) ->
     nwo  = process.env.HUBOT_GITHUB_REPO
-    id   = res.match[1]
-    body = res.match[2]
-    url  = "/repos/#{nwo}/issues/#{id}/comments"
     user = res.envelope.user.name
+    id   = res.match[1]
+    body = res.match[2] + "\r\n\r\n_submitted by #{user}_"
+    url  = "/repos/#{nwo}/issues/#{id}/comments"
 
     postComment = (github) ->
       github.post url, {body: body}, (comment) ->
