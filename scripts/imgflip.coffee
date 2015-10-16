@@ -160,7 +160,7 @@ module.exports = (robot) ->
         template_id: 10453954
       },
       {
-        regex: /(my name is inigo montoya,?) (you (,*),? prepare to die!?)/i,
+        regex: /(my name is inigo montoya,?) (you (.*),? prepare to die!?)/i,
         template_id: 10453954
       }
     ]
