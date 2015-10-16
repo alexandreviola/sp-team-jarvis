@@ -26,7 +26,7 @@ module.exports = (robot) ->
   parseBody = (rawBody) ->
     if rawBody then rawBody.slice(2).trim() else rawBody
 
-  robot.respond /new issue ([\w\s]+)(: (.*))?/i, (res) ->
+  robot.respond /new issue ([\w\s`~!@#$%^&*()\[\]{}<>?./|"',;_+=-]+)(: (.*))?/i, (res) ->
     repo = githubot.qualified_repo process.env.HUBOT_GITHUB_REPO
     user = res.envelope.user.name
     payload = {}
