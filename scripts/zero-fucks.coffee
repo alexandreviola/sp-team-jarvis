@@ -16,8 +16,8 @@
 #   cpradio
 
 module.exports = (robot) ->
-  robot.hear /\b\:fu\:\b/i, (msg) ->
+  robot.hear /\:fu\:/i, (msg) ->
     msg.send "zero ***** were given that day"
 
-  robot.respond /^(whatever|how many fucks were given that day\??)/i, (msg) ->
+  robot.respond /(whatever|how many fucks were given that day\??)/i, (msg) ->
     msg.send "zero ***** were given that day"
