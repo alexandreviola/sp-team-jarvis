@@ -38,6 +38,7 @@
 #   hubot <text>, you keep using that word. <text> - You Keep Using That Word meme
 #   hubot my name is inigo montoya, you <text>, prepare to die! - Prepare to Die meme
 #   hubot you shall not <text> - Gandalf - You Shall Not ... meme
+#   hubot <text> it's over 9000 - Over 9000 meme
 #
 # Author:
 #   dylanwenzlau and cpradio
@@ -167,6 +168,10 @@ module.exports = (robot) ->
       {
         regex: /()(you shall not .*)/i,
         template_id: 8022730
+      },
+      {
+        regex: /(.*) (it'?s over 9,?000[!]*)/i,
+        template_id: 17945553
       }
     ]
 
