@@ -30,7 +30,7 @@ module.exports = (robot) ->
 
     closeIssue = (github) ->
       github.patch url, {state: 'closed'}, (issue) ->
-        res.reply "I've closed issue ##{id} for #{nwo} (#{issue.html_url})"
+        res.reply "I've closed issue ##{id} for you at (#{issue.html_url})"
 
     return closeIssue(githubot(robot)) unless useIdentity
 
@@ -48,7 +48,7 @@ module.exports = (robot) ->
 
     openIssue = (github) ->
       github.patch url, {state: 'open'}, (issue) ->
-        res.reply "I've opened issue ##{id} for #{nwo} (#{issue.html_url})"
+        res.reply "I've opened issue ##{id} for you at (#{issue.html_url})"
 
     return openIssue(githubot(robot)) unless useIdentity
 
