@@ -36,7 +36,7 @@ module.exports = (robot) ->
 
     createIssue = (github, payload) ->
       github.post url, payload, (issue) ->
-        res.reply "I've opened the issue ##{issue.number} for #{user} (#{issue.html_url})"
+        res.reply "I've opened the issue ##{issue.number} for you at (#{issue.html_url})"
 
     return createIssue(githubot(robot), payload) unless useIdentity
 
