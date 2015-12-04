@@ -8,8 +8,8 @@
 #   None
 #
 # Commands
-#   sorry - response with "Sorry <user>, but I can't do that"
-#
+#   hubot, (push|kick|punch|shove|hit|throw) <text> - response with "Sorry <user>, but I can't do that"
+#   (push|kick|punch|shove|hit|throw) <text> hubot - response with "Sorry <user>, but I can't do that"
 # Author:
 #   cpradio
 
