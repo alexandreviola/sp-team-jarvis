@@ -14,9 +14,11 @@
 #   cpradio
 
 entering_messages = [
-  "Hi! Are you here to keep me company?",
-  "Hi! Will you be my friend?",
-  "Hi! What tricks can you do to entertain me?"
+  "Hello, it's me... I was wondering if after all these years you'd like to meet.",
+  "Hello, can you hear me? I'm in California dreaming about who we used to be.",
+  "Hello from the other side!!! I must have called a thousand times!!!",
+  "Hello from the outside!!! At least I can say that I've tried!!!",
+  "Hello, how are you? It's so typical of me to talk about myself, I'm sorry..."
 ]
 
 module.exports = (robot) ->
