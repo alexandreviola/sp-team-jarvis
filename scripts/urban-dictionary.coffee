@@ -26,9 +26,8 @@
 unirest = require('unirest')
 
 module.exports = (robot) ->
-  robot.respond /(ud-define)(.*)/i, (msg) ->
-    phrase = msg.message.text
-    term = phrase.substring(phrase.indexOf('define') + 10)
+  robot.respond /(ud-define) (.*)/i, (msg) ->
+    term = msg.match[2]
     unirest.
     get("https://mashape-community-urban-dictionary.p.mashape.com/define?term=#{term}").
     header('X-Mashape-Key', process.env.HUBOT_MASHAPE_KEY).
@@ -36,7 +35,7 @@ module.exports = (robot) ->
     end (result) ->
       answer = result.body.list[0]
       if typeof answer == 'undefined'
-        response = "Could not find definition. Sorry dummy."
+        response = "Could not find definition on Urban Dictionary."
       else
         response = "*Definition:*\n#{answer.definition}\n*Example:*\n#{answer.example}"
       msg.send response
