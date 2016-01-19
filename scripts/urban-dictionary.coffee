@@ -18,7 +18,7 @@
 #   HUBOT_MASHAPE_KEY
 #
 # Commands:
-#   ud-define <word> - Returns the definition of the word from Urban Dictionary
+#   hubot ud-define <word> - Returns the definition of the word from Urban Dictionary
 #
 # Author:
 #   BryanSaxon
@@ -26,7 +26,7 @@
 unirest = require('unirest')
 
 module.exports = (robot) ->
-  robot.hear /(ud-define)(.*)/i, (msg) ->
+  robot.respond /(ud-define)(.*)/i, (msg) ->
     phrase = msg.message.text
     term = phrase.substring(phrase.indexOf('define') + 10)
     unirest.
