@@ -40,7 +40,7 @@ module.exports = (robot) ->
         response = "*Definition:*\n#{answer.definition}\n*Example:*\n#{answer.example}"
 
       if msg.message.user.name == 'cpradio'
-        robot.messageRoom msg.message.user.name, response
+        robot.messageRoom msg.message.user.name, "new method #{response}"
       else
         robot.emit('slack.attachment', {channel: msg.message.user.name, text: response, attachments: undefined})
 
