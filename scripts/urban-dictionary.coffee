@@ -21,7 +21,7 @@
 #   hubot ud-define <word> - Returns the definition of the word from Urban Dictionary
 #
 # Author:
-#   BryanSaxon
+#   BryanSaxon, cpradio
 
 unirest = require('unirest')
 
@@ -38,5 +38,5 @@ module.exports = (robot) ->
         response = "Could not find definition on Urban Dictionary."
       else
         response = "*Definition:*\n#{answer.definition}\n*Example:*\n#{answer.example}"
-      msg.send response
+      msg.reply response
       return
