@@ -39,5 +39,5 @@ module.exports = (robot) ->
       else
         response = "*Definition:*\n#{answer.definition}\n*Example:*\n#{answer.example}"
 
-      robot.emit('slack.attachment', {channel: msg.message.user.id, text: response, attachments: undefined})
+      robot.emit('slack.attachment', {channel: msg.message.user.name, text: response, attachments: undefined})
       return
