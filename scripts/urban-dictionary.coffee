@@ -39,5 +39,7 @@ module.exports = (robot) ->
         response = "Could not find definition on Urban Dictionary."
       else
         response = "*Definition:*\n#{answer.definition}\n*Example:*\n#{answer.example}"
-      msg.send user, response
+
+      delete msg.message.user.room
+      msg.send response
       return
