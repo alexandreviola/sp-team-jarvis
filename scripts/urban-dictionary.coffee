@@ -40,4 +40,5 @@ module.exports = (robot) ->
         response = "*Definition:*\n#{answer.definition}\n*Example:*\n#{answer.example}"
 
       robot.emit('slack.attachment', {channel: msg.message.user.name, text: response, attachments: undefined})
+      msg.reply "I've sent you my findings"
       return
