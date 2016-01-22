@@ -39,8 +39,11 @@ module.exports = (robot) ->
       else
         response = "*Definition:*\n#{answer.definition}\n*Example:*\n#{answer.example}"
 
-      user = robot.adapter.userForId 'jarvis'
+      user = robot.brain.userForId 'jarvis'
+      robot.logger.debug "user #{user}"
       user.room = msg.message.user.name
+      robot.logger.debug "user room #{user.room}"
       user.type = 'groupchat'
+      robot.logger.debug "user type #{user.type}"
       msg.send user, response
       return
