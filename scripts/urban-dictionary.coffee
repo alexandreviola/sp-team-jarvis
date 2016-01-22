@@ -39,5 +39,5 @@ module.exports = (robot) ->
       else
         response = "*Definition:*\n#{answer.definition}\n*Example:*\n#{answer.example}"
 
-      msg.send {room: msg.message.user.name}, response
+      msg.send {room: msg.message.user.id}, response
       return
