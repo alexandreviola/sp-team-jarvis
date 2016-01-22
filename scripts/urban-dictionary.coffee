@@ -39,6 +39,10 @@ module.exports = (robot) ->
       else
         response = "*Definition:*\n#{answer.definition}\n*Example:*\n#{answer.example}"
 
-      robot.emit('slack.attachment', {channel: msg.message.user.name, text: response, attachments: undefined})
+      if msg.message.user.name == 'cpradio'
+        robot.messageRoom msg.message.user.name, response
+      else
+        robot.emit('slack.attachment', {channel: msg.message.user.name, text: response, attachments: undefined})
+
       msg.reply "I've sent you my findings"
       return
