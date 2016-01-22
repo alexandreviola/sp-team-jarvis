@@ -27,6 +27,7 @@ unirest = require('unirest')
 
 module.exports = (robot) ->
   robot.respond /(ud-define) (.*)/i, (msg) ->
+    user = msg.message.user.name
     term = msg.match[2]
     unirest.
     get("https://mashape-community-urban-dictionary.p.mashape.com/define?term=#{term}").
@@ -38,5 +39,5 @@ module.exports = (robot) ->
         response = "Could not find definition on Urban Dictionary."
       else
         response = "*Definition:*\n#{answer.definition}\n*Example:*\n#{answer.example}"
-      msg.reply response
+      msg.send({user: {name: user}}, response)
       return
