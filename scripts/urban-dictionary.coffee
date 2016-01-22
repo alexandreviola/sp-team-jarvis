@@ -40,10 +40,9 @@ module.exports = (robot) ->
         response = "*Definition:*\n#{answer.definition}\n*Example:*\n#{answer.example}"
 
       user = robot.brain.userForId 'jarvis'
-      console.log "user #{user}"
       user.room = msg.message.user.name
-      console.log "user room #{user.room}"
       user.type = 'groupchat'
-      console.log "user type #{user.type}"
-      msg.send user, response
+      for msgKey, msgVal of user
+        console.log "user #{msgKey} = #{msgVal}"
+#      msg.send user, response
       return
