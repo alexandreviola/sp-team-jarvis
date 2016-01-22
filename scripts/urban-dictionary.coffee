@@ -25,11 +25,6 @@
 
 unirest = require('unirest')
 
-helpers = {
-  dm: (robot, user, reply, attachments) ->
-    robot.emit('slack.attachment', {channel: user.name, text: reply, attachments: attachments})
-}
-
 module.exports = (robot) ->
   robot.respond /(ud-define) (.*)/i, (msg) ->
     term = msg.match[2]
