@@ -83,3 +83,9 @@ module.exports = (robot) ->
 
   robot.hear /\b(is us|one of us)\b/i, (msg) ->
     msg.send "one of us, one of us"
+
+  robot.hear /\balpha\b/i, (msg) ->
+    msg.send "I hear you talking about me!! Just wait, someday I'll be beta, you just wait and see!"
+
+  robot.hear /\bbeta\b/i, (msg) ->
+    msg.send "Beta?!?! Beta?!?! I'm going to be beta?!? Oh wait... you weren't taling about me were you. :'("
