@@ -30,8 +30,8 @@ activity_responses = [
 ]
 
 module.exports = (robot) ->
-  robot.respond /is guido(2004)?( always)? on holiday\??/i, (msg) ->
+  robot.respond /is @?guido(2004)?( always)? on holiday\??/i, (msg) ->
     return msg.send msg.random holiday_responses
 
-  robot.respond /(what|where) is guido(2004)?( doing)?\??/i, (msg) ->
+  robot.respond /(what|where) is @?guido(2004)?( doing)?\??/i, (msg) ->
     return msg.send msg.random activity_responses
