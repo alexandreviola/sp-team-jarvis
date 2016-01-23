@@ -39,6 +39,7 @@
 #   hubot my name is inigo montoya, you <text>, prepare to die! - Prepare to Die meme
 #   hubot you shall not <text> - Gandalf - You Shall Not ... meme
 #   hubot <text> it's over 9000 - Over 9000 meme
+#   hubot i see <text> - I see dead people meme
 #
 # Author:
 #   dylanwenzlau and cpradio
@@ -172,6 +173,10 @@ module.exports = (robot) ->
       {
         regex: /(.*) (it'?s over 9,?000[!]*)/i,
         template_id: 17945553
+      },
+      {
+        regex:/()(i see .*)/i,
+        template_id: 19272969
       }
     ]
 
