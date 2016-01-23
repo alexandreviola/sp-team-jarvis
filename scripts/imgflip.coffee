@@ -41,6 +41,7 @@
 #   hubot <text> it's over 9000 - Over 9000 meme
 #   hubot i see <text> - I see dead people meme
 #   hubot there can only be one <text> - highlander meme
+#   hubot <text>, but then I took an arrow to the knee - arrow to the knee meme
 #
 # Author:
 #   dylanwenzlau and cpradio
@@ -182,6 +183,10 @@ module.exports = (robot) ->
       {
         regex: /(there can only be one) (.*)/i,
         template_id: 19586218
+      },
+      {
+        regex: /(.*),? (but then I took an arrow to the knee)/i,
+        template_id: 31354503
       }
     ]
 
