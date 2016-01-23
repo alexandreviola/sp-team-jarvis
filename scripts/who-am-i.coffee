@@ -31,7 +31,7 @@ module.exports = (robot) ->
     }
   }
 
-  robot.hear /(.*)/i, (msg) ->
+  robot.respond /who am i\??/i, (msg) ->
     sender = msg.message.user.name.toLowerCase()
 
     response = "";
