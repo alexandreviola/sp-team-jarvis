@@ -31,7 +31,15 @@ activity_responses = [
 
 module.exports = (robot) ->
   robot.respond /is @?guido(2004)?( always)? on holiday\??/i, (msg) ->
-    return msg.send msg.random holiday_responses
+    user = msg.message.user.id
+    if user == "U04L98BMK"
+      msg.send "Shouldn't you know if you are on holiday or not?"
+    else
+      msg.send msg.random holiday_responses
 
   robot.respond /(what|where) is @?guido(2004)?( doing)?\??/i, (msg) ->
-    return msg.send msg.random activity_responses
+    user = msg.message.user.id
+    if user == "U04L98BMK"
+      msg.send "Are you lost or confused @guido2004? Do I need to call for help?"
+    else
+      msg.send msg.random activity_responses
