@@ -40,6 +40,7 @@
 #   hubot you shall not <text> - Gandalf - You Shall Not ... meme
 #   hubot <text> it's over 9000 - Over 9000 meme
 #   hubot i see <text> - I see dead people meme
+#   hubot there can only be one <text> - highlander meme
 #
 # Author:
 #   dylanwenzlau and cpradio
@@ -175,8 +176,12 @@ module.exports = (robot) ->
         template_id: 17945553
       },
       {
-        regex:/()(i see .*)/i,
+        regex: /()(i see .*)/i,
         template_id: 19272969
+      },
+      {
+        regex: /(there can only be one) (.*)/i,
+        template_id: 19586218
       }
     ]
 
