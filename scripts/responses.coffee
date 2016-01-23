@@ -88,4 +88,4 @@ module.exports = (robot) ->
     msg.send "I hear you talking about me!! Just wait, someday I'll be beta, you just wait and see!"
 
   robot.hear /\bbeta\b/i, (msg) ->
-    msg.send "Beta?!?! Beta?!?! I'm going to be beta?!? Oh wait... you weren't taling about me were you. :'("
+    msg.send "Beta?!?! Beta?!?! I'm going to be beta?!? Oh wait... you weren't taling about me were you. :cry:"
