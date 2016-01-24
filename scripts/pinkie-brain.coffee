@@ -55,7 +55,7 @@ module.exports = (robot) ->
     user = msg.message.user.name
     msg.send "The same thing we do every night, #{user}. Try to take over the world."
 
-  robot.respond /are you pondering what (I'm|I am) pondering\??/i, (msg) ->
+  robot.respond /are you pondering what (I'm|I’m|I am) pondering\??/i, (msg) ->
     user = msg.message.user.name
     response = msg.random pondering
     msg.send response.replace /{user}/, user
