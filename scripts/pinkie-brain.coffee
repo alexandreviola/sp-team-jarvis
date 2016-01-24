@@ -42,7 +42,7 @@ pondering = [
   "Um... I think so, {user}, but what if the chicken won't wear the nylons?",
   "I think so {user}, but if Jimmy cracked corn, and no one cares, why does he keep doing it?",
   "I think so, {user}, but we're already naked.",
-  "I think so, {user}, but me and Pippi Longstocking... I mean, what would the children look ",
+  "I think so, {user}, but me and Pippi Longstocking... I mean, what would the children look like?",
   "Uh... yeah, {user}, but where will we get rubber pants our size?",
   "Well, I think so, {user}, but I can't memorize a whole opera in Yiddish.",
   "I think so {user}, but the Rockettes, it's mostly girls, isn't it?",
