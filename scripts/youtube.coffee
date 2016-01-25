@@ -26,27 +26,28 @@ module.exports = (robot) ->
   robot.respond /(?:youtube|yt)(?: me)?\s(.*)/i, (msg) ->
     rick_roll_opportunity = msg.random [1..10]
     if rick_roll_opportunity == 7
-      return msg.send "https://www.youtube.com/watch?v=oHg5SJYRHA0"
+      query = "rick roll"
     else
       query = msg.match[1]
-      ytSearchUrl = "https://www.googleapis.com/youtube/v3/search"
-      searchParams = {
-        order: "relevance"
-        part: "snippet",
-        maxResults: 1,
-        type: "video",
-        key: ytApiKey,
-        q: query
-      }
 
-      robot.http(ytSearchUrl)
-      .query(searchParams)
-      .get() (err, res, body) ->
-        videos = JSON.parse(body).items
+    ytSearchUrl = "https://www.googleapis.com/youtube/v3/search"
+    searchParams = {
+      order: "relevance"
+      part: "snippet",
+      maxResults: 1,
+      type: "video",
+      key: ytApiKey,
+      q: query
+    }
 
-        if videos == undefined || videos.length == 0
-          msg. send "No video results for \"#{query}\""
-          return
+    robot.http(ytSearchUrl)
+    .query(searchParams)
+    .get() (err, res, body) ->
+      videos = JSON.parse(body).items
 
-        videoId = videos[0].id.videoId
-        msg.send "http://www.youtube.com/watch?v=#{videoId}"
+      if videos == undefined || videos.length == 0
+        msg. send "No video results for \"#{query}\""
+        return
+
+      videoId = videos[0].id.videoId
+      msg.send "http://www.youtube.com/watch?v=#{videoId}"
