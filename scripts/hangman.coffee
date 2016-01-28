@@ -105,7 +105,7 @@ class Game
       else if this.wasAnswered()
         callback("Congratulations, you still had #{pluralisedGuess(@remainingGuesses)} remaining!")
 
-      callback("The #{@wordLetters.length} letter word was: #{@word}")
+      callback("The #{@wordLetters.length} letter word was: *#{@word}*")
       callback(@definitions)
     else
       callback("The #{@answerLetters.length} letter word is: *#{@answerLetters.join(' ')}*")
