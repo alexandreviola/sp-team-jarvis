@@ -110,7 +110,9 @@ class Game
     else
       callback("The #{@answerLetters.length} letter word is: *#{@answerLetters.join(' ')}*")
       callback("You have #{pluralisedGuess(@remainingGuesses)} remaining")
-      callback("Letters used: _#{@previousGuesses.join(' ')}_")
+      if @previousGuesses.length > 2
+        @guessOutput = @previousGuesses.filter (x) -> x != "-" && x != " "
+        callback("Letters used: _#{@guessOutput.join(' ')}_")
 
 module.exports = (robot) ->
   gamesByRoom = {}
