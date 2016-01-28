@@ -110,13 +110,10 @@ class Game
     else
       callback("The #{@answerLetters.length} letter word is: *#{@answerLetters.join(' ')}*")
       callback("You have #{pluralisedGuess(@remainingGuesses)} remaining")
+      callback("Letters used: _#{@previousGuesses.join(' ')}_")
 
 module.exports = (robot) ->
   gamesByRoom = {}
-
-  robot.respond /letters$/i, (msg) ->
-    msg.send("You have used *#{@previousGuesses.join(' ')}*")
-    return
 
   robot.respond /hangman( .*)?$/i, (msg) ->
 
