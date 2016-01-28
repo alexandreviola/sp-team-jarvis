@@ -114,6 +114,10 @@ class Game
 module.exports = (robot) ->
   gamesByRoom = {}
 
+  robot.respond /letters$/i, (msg) ->
+    msg.send("You have used *#{@previousGuesses.join(' ')}*")
+    return
+
   robot.respond /hangman( .*)?$/i, (msg) ->
 
     if process.env.WORDNIK_API_KEY == undefined
