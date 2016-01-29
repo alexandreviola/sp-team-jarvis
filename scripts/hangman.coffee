@@ -50,7 +50,11 @@ class Game
     guess = guess.trim().toUpperCase()
 
     if guess.length == 2 && guess.match /-(.*)/i
-      @ruledOutLetters.push(guess.substring 1)
+      @ruledOutLetter = guess.substring 1
+      if guess.substring 1 in @ruledOutLetters
+        this.duplicateRuledOutLetter(@ruledOutLetter)
+      else
+        this.addRuledOutLetter(@ruledOutLetter)
     else
       if guess in @previousGuessedLetters || guess in @previousGuessedWords
         this.duplicateGuess(guess)
@@ -93,6 +97,13 @@ class Game
 
   noGuess: ->
     @message = null
+
+  duplicateRuledOutLetter: (guess) ->
+    @message = "You already ruled out #{guess} so let's pretend that never happened, shall we?"
+
+  addRuledOutLetter: (guess) ->
+    @message = "Added #{guess} to your ruled out list."
+    @ruledOutLetters.push(guess.substring 1)
 
   errantWordGuess: (guess) ->
     @message = "The word #{guess} isn't the correct length so let's pretend that never happened, shall we?"
