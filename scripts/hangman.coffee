@@ -49,7 +49,7 @@ class Game
     guess = guess.trim().toUpperCase()
 
     if guess.length == 2 && guess.match /-(.*)/i
-      @ruledOutGuesses.push(guess)
+      @ruledOutGuesses.push(guess.substring 1)
     else
       if guess in @previousGuesses
         this.duplicateGuess(guess)
