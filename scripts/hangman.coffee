@@ -12,6 +12,7 @@
 # Commands:
 #   hubot hangman - Display the state of the current game
 #   hubot hangman <letterOrWord> - Make a guess
+#   hubot hangman -<letter> - Add letter to ruled out list
 #
 # Author:
 #   kandrews
@@ -28,6 +29,7 @@ class Game
     this.guessSpace()
     @remainingGuesses = 9
     @previousGuesses = ["-", " "]
+    @ruledOutGuesses = []
     @message = null
 
   isFinished: ->
@@ -46,14 +48,17 @@ class Game
 
     guess = guess.trim().toUpperCase()
 
-    if guess in @previousGuesses
-      this.duplicateGuess(guess)
+    if guess.length == 2 && guess.match /-(.*)/i
+      @ruledOutGuesses.push(guess)
     else
-      @previousGuesses.push(guess)
-      switch guess.length
-        when 1 then this.guessLetter(guess)
-        when @word.length then this.guessWord(guess)
-        else this.errantWordGuess(guess)
+      if guess in @previousGuesses
+        this.duplicateGuess(guess)
+      else
+        @previousGuesses.push(guess)
+        switch guess.length
+          when 1 then this.guessLetter(guess)
+          when @word.length then this.guessWord(guess)
+          else this.errantWordGuess(guess)
 
   guessDash: ->
     indexes = (index for letter, index in @wordLetters when "-" == letter)
@@ -113,6 +118,8 @@ class Game
       if @previousGuesses.length > 2
         @guessOutput = @previousGuesses.filter (x) -> x != "-" && x != " "
         callback("Letters used: _#{@guessOutput.join(' ')}_")
+      if @ruledOutGuesses.length > 0
+        callback("Ruled out: _#{@ruledOutGuesses.join(' ')}_")
 
 module.exports = (robot) ->
   gamesByRoom = {}
