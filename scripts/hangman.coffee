@@ -28,8 +28,9 @@ class Game
     this.guessDash()
     this.guessSpace()
     @remainingGuesses = 9
-    @previousGuesses = ["-", " "]
-    @ruledOutGuesses = []
+    @previousGuessedLetters = ["-", " "]
+    @previousGuessedWords = []
+    @ruledOutLetters = []
     @message = null
 
   isFinished: ->
@@ -49,16 +50,21 @@ class Game
     guess = guess.trim().toUpperCase()
 
     if guess.length == 2 && guess.match /-(.*)/i
-      @ruledOutGuesses.push(guess)
+      @ruledOutLetters.push(guess.substring 1)
     else
-      if guess in @previousGuesses
+      if guess in @previousGuessedLetters || guess in @previousGuessedWords
         this.duplicateGuess(guess)
       else
-        @previousGuesses.push(guess)
         switch guess.length
-          when 1 then this.guessLetter(guess)
-          when @word.length then this.guessWord(guess)
-          else this.errantWordGuess(guess)
+          when 1
+            this.guessLetter(guess)
+            @previousGuessedLetters.push(guess)
+          when @word.length
+            this.guessWord(guess)
+            @previousGuessedWords.push(guess)
+          else
+            this.errantWordGuess(guess)
+            @previousGuessedWords.push(guess)
 
   guessDash: ->
     indexes = (index for letter, index in @wordLetters when "-" == letter)
@@ -115,11 +121,13 @@ class Game
     else
       callback("The #{@answerLetters.length} letter word is: *#{@answerLetters.join(' ')}*")
       callback("You have #{pluralisedGuess(@remainingGuesses)} remaining")
-      if @previousGuesses.length > 2
-        @guessOutput = @previousGuesses.filter (x) -> x != "-" && x != " "
+      if @previousGuessedLetters.length > 2
+        @guessOutput = @previousGuessedLetters.filter (x) -> x != "-" && x != " "
         callback("Letters used: _#{@guessOutput.join(' ')}_")
-      if @ruledOutGuesses.length > 0
-        callback("Ruled out: _#{@ruledOutGuesses.join(' ')}_")
+      if @previousGuessedWords.length > 0
+        callback("Guessed Words: _#{@previousGuessedWords.join(', ')}_")
+      if @ruledOutLetters.length > 0
+        callback("Ruled out: _#{@ruledOutLetters.join(' ')}_")
 
 module.exports = (robot) ->
   gamesByRoom = {}
