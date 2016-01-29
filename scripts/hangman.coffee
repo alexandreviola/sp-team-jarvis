@@ -50,11 +50,11 @@ class Game
     guess = guess.trim().toUpperCase()
 
     if guess.length == 2 && guess.match /-(.*)/i
-      @ruledOutLetter = guess.substring 1
-      if guess.substring 1 in @ruledOutLetters
-        this.duplicateRuledOutLetter(@ruledOutLetter)
+      ruledOutLetter = guess.substring 1
+      if ruledOutLetter in @ruledOutLetters
+        this.duplicateRuledOutLetter(ruledOutLetter)
       else
-        this.addRuledOutLetter(@ruledOutLetter)
+        this.addRuledOutLetter(ruledOutLetter)
     else
       if guess in @previousGuessedLetters || guess in @previousGuessedWords
         this.duplicateGuess(guess)
@@ -103,7 +103,7 @@ class Game
 
   addRuledOutLetter: (guess) ->
     @message = "Added #{guess} to your ruled out list."
-    @ruledOutLetters.push(guess.substring 1)
+    @ruledOutLetters.push(guess)
 
   errantWordGuess: (guess) ->
     @message = "The word #{guess} isn't the correct length so let's pretend that never happened, shall we?"
@@ -133,8 +133,8 @@ class Game
       callback("The #{@answerLetters.length} letter word is: *#{@answerLetters.join(' ')}*")
       callback("You have #{pluralisedGuess(@remainingGuesses)} remaining")
       if @previousGuessedLetters.length > 2
-        @guessOutput = @previousGuessedLetters.filter (x) -> x != "-" && x != " "
-        callback("Letters used: _#{@guessOutput.join(' ')}_")
+        guessOutput = @previousGuessedLetters.filter (x) -> x != "-" && x != " "
+        callback("Letters used: _#{guessOutput.join(' ')}_")
       if @previousGuessedWords.length > 0
         callback("Guessed Words: _#{@previousGuessedWords.join(', ')}_")
       if @ruledOutLetters.length > 0
