@@ -43,11 +43,11 @@ class Game
     @remainingGuesses == 0
 
   guess: (guess) ->
+    guess = guess.trim().toUpperCase()
+
     if !guess
       this.noGuess()
       return
-
-    guess = guess.trim().toUpperCase()
 
     if guess.length == 2 && guess.match /-(.*)/i
       ruledOutLetter = guess.substring 1
