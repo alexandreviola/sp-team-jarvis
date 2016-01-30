@@ -43,9 +43,10 @@ class Game
     @remainingGuesses == 0
 
   guess: (guess) ->
+    guess = guess || ""
     guess = guess.trim().toUpperCase()
 
-    if !guess
+    if guess.length == 0
       this.noGuess()
       return
 
