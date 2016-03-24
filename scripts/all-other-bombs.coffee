@@ -6,7 +6,7 @@
 #
 # Configuration:
 #   None
-# 
+#
 # Commands:
 #   hubot <text> bomb me <number> - Many many <text>s!
 #
@@ -15,10 +15,10 @@
 
 module.exports = (robot) ->
   robot.hear /^jarvis (?!(bear|cat|kitten|sloth|sheen|corgi|pug))(.*) bomb(?: me)?( \d+)?$/i, (msg) ->
-    texts = msg.match[3] || 5
-    bombMe(msg, msg.match[2]) for i in [1..texts]
+    texts = parseInt(msg.match[3]) || 5
+    bombMe(msg, msg.match[2], texts)
 
-bombMe = (msg, text)->
-  msg.http('http://www.pixplorer.co.uk/getimage/' + encodeURIComponent(text))
+bombMe = (msg, text, number)->
+  msg.http('http://api.pixplorer.co.uk/image?amount=' + number + '&size=l&word=' + encodeURIComponent(text))
     .get() (err, res, body) ->
-      msg.send JSON.parse(body).imglink
+      msg.send image.imageurl for image in JSON.parse(body).images
