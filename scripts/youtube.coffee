@@ -15,6 +15,17 @@
 # Author:
 #   sprngr and cpradio
 
+troll_queries = [
+  "its raining tacos - 10h",
+  "rick roll",
+  "chicken song 10 hours",
+  "makin bacon pancakes 10 hour",
+  "the duck song",
+  "llama song 10 hours kipper",
+  "badger song 10 hours",
+  "gummy bear song 10 hours"
+]
+
 module.exports = (robot) ->
 
   unless process.env.HUBOT_GOOGLE_API?
@@ -25,8 +36,8 @@ module.exports = (robot) ->
 
   robot.respond /(?:youtube|yt)(?: me)?\s(.*)/i, (msg) ->
     rick_roll_opportunity = msg.random [1..10]
-    if rick_roll_opportunity == 7
-      query = "rick roll"
+    if rick_roll_opportunity == 7 || rick_roll_opportunity == 3
+      query = msg.random troll_queries
     else
       query = msg.match[1]
 
