@@ -19,6 +19,6 @@ module.exports = (robot) ->
     bombMe(msg, msg.match[2], texts)
 
 bombMe = (msg, text, number)->
-  msg.http('http://api.pixplorer.co.uk/image?amount=' + number + '&size=l&word=' + encodeURIComponent(text))
+  msg.http('http://api.pixplorer.co.uk/image?amount=' + number + '&word=' + encodeURIComponent(text))
     .get() (err, res, body) ->
       msg.send image.imageurl for image in JSON.parse(body).images
