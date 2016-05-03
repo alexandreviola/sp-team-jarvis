@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   close - Display a no cigar image #meme #nuisance
+#   close - Display a no cigar image #nuisance
 #
 # Author:
 #   jeffreylees
