@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   silence - displays a silence i kill you image
+#   silence - displays a silence i kill you image #meme
 #
 # Author:
 #   cpradio

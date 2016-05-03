@@ -6,11 +6,11 @@
 #
 # Configuration:
 #   None
-# 
+#
 # Commands:
-#   hubot kitten|cat me - A randomly selected kitten
-#   hubot kitten|cat me <w>x<h> - A kitten of the given size
-#   hubot kitten|cat bomb me <number> - Many many kittens!
+#   hubot kitten|cat me - A randomly selected kitten #bomb #kittens
+#   hubot kitten|cat me <w>x<h> - A kitten of the given size #bomb #kittens
+#   hubot kitten|cat bomb me <number> - Many many kittens! #bomb #kittens
 #
 # Author:
 #   dstrelau

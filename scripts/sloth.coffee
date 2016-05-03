@@ -6,11 +6,11 @@
 #
 # Configuration:
 #   None
-# 
+#
 # Commands:
-#   hubot sloth me - A randomly selected sloth
-#   hubot sloth me <w>x<h> - A sloth of the given size
-#   hubot sloth bomb me <number> - Many many sloths!
+#   hubot sloth me - A randomly selected sloth #bomb #sloths
+#   hubot sloth me <w>x<h> - A sloth of the given size #bomb #sloths
+#   hubot sloth bomb me <number> - Many many sloths! #bomb #sloths
 #
 # Author:
 #   dstrelau

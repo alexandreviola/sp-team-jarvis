@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   leeroy - displays its related youtube video
+#   leeroy - displays its related youtube video #meme
 #
 # Author:
 #   cpradio

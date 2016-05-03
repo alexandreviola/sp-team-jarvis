@@ -8,8 +8,8 @@
 #   None
 #
 # Commands:
-#   hubot what are we going to do tonight?
-#   hubot are you pondering what (I'm|I am) pondering?
+#   hubot what are we going to do tonight? #jokes #quotes
+#   hubot are you pondering what (I'm|I am) pondering? #jokes #quotes
 #
 # Author:
 #   cpradio

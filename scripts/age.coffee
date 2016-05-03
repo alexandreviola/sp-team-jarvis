@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot how old are you?
+#   hubot how old are you? #misc
 #
 # Author:
 #   cpradio

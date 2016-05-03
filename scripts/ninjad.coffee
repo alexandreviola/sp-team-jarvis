@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   ninja'd - Display a ninja'd image
+#   ninja'd - Display a ninja'd image #meme
 #
 # Author:
 #   cpradio

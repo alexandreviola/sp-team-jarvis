@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   escalated - displays a that escalated quickly image
+#   escalated - displays a that escalated quickly image #meme
 #
 # Author:
 #   jeffreylees

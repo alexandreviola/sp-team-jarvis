@@ -9,10 +9,10 @@
 #   None
 #
 # Commands:
-#   hubot poll <question> -a <answers> - Create a poll with comma separated answers
-#   hubot (end|stop|close) poll - End current poll and show results
-#   hubot vote <number> - Cast your vote
-#   hubot previous poll - Previous poll results
+#   hubot poll <question> -a <answers> - Create a poll with comma separated answers #polls
+#   hubot (end|stop|close) poll - End current poll and show results #polls
+#   hubot vote <number> - Cast your vote #polls
+#   hubot previous poll - Previous poll results #polls
 #
 # Notes:
 #   $ hubot poll How cool is that? -a Amazeballz, Very Nice, Nice, Boring

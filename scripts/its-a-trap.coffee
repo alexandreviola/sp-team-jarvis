@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   it's a trap - Display an Admiral Ackbar image
+#   it's a trap - Display an Admiral Ackbar image #meme
 #
 # Author:
 #   jeffreylees

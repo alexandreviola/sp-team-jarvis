@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   my precious - displays a gollum image
+#   my precious - displays a gollum #meme
 #
 # Author:
 #   cpradio

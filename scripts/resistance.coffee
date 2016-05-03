@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   resistance - displays a resistance is futile image
+#   resistance - displays a resistance is futile image #meme
 #
 # Author:
 #   jeffreylees

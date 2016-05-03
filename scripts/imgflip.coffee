@@ -9,39 +9,39 @@
 #   IMGFLIP_API_PASSWORD [optional, overrides default imgflip_hubot account]
 #
 # Commands:
-#   hubot One does not simply <text> - Lord of the Rings Boromir
-#   hubot I don't always <text> but when i do <text> - The Most Interesting man in the World
-#   hubot aliens <text> - Ancient Aliens History Channel Guy
-#   hubot grumpy cat <text> - Grumpy Cat with text on the bottom
-#   hubot <text>, <text> everywhere - X, X Everywhere (Buzz and Woody from Toy Story)
-#   hubot Not sure if <text> or <text> - Futurama Fry
-#   hubot Y U NO <text> - Y U NO Guy
-#   hubot Brace yourselves <text> - Brace Yourselves X is Coming (Imminent Ned, Game of Thrones)
-#   hubot <text> all the <text> - X all the Y
-#   hubot <text> that would be great - Bill Lumbergh from Office Space
-#   hubot <text> too damn <text> - The rent is too damn high
-#   hubot Yo dawg <text> so <text> - Yo Dawg Heard You (Xzibit)
-#   hubot <text> you're gonna have a bad time - Super Cool Ski Instructor from South Park
-#   hubot Am I the only one around here <text> - The Big Lebowski
-#   hubot What if I told you <text> - Matrix Morpheus
-#   hubot <text> ain't nobody got time for that
-#   hubot <text> I guarantee it - George Zimmer
-#   hubot <text> and it's gone - South Park Banker Guy
-#   hubot <text> nobody bats an eye <text> everyone loses their minds - Heath Ledger Joker
-#   hubot back in my day <text> - Grumpy old man
-#   hubot <text> they said, <text> they said - Laundry Viking
-#   hubot no <text> for you! - Soup Nazi
-#   hubot i can haz <text> - i can haz kitty
-#   hubot one of us - one of us aliens from Toy Story
-#   hubot <text> shut up and take my money - Futurama Fry - Shut up and take my money
-#   hubot this is <text> - Sparta - This is Sparta!
-#   hubot <text>, you keep using that word. <text> - You Keep Using That Word meme
-#   hubot my name is inigo montoya, you <text>, prepare to die! - Prepare to Die meme
-#   hubot you shall not <text> - Gandalf - You Shall Not ... meme
-#   hubot <text> it's over 9000 - Over 9000 meme
-#   hubot i see <text> - I see dead people meme
-#   hubot there can only be one <text> - highlander meme
-#   hubot <text>, but then I took an arrow to the knee - arrow to the knee meme
+#   hubot One does not simply <text> - Lord of the Rings Boromir #meme
+#   hubot I don't always <text> but when i do <text> - The Most Interesting man in the World #meme
+#   hubot aliens <text> - Ancient Aliens History Channel Guy #meme
+#   hubot grumpy cat <text> - Grumpy Cat with text on the bottom #meme
+#   hubot <text>, <text> everywhere - X, X Everywhere (Buzz and Woody from Toy Story) #meme
+#   hubot Not sure if <text> or <text> - Futurama Fry #meme
+#   hubot Y U NO <text> - Y U NO Guy #meme
+#   hubot Brace yourselves <text> - Brace Yourselves X is Coming (Imminent Ned, Game of Thrones) #meme
+#   hubot <text> all the <text> - X all the Y #meme
+#   hubot <text> that would be great - Bill Lumbergh from Office Space #meme
+#   hubot <text> too damn <text> - The rent is too damn high #meme
+#   hubot Yo dawg <text> so <text> - Yo Dawg Heard You (Xzibit) #meme
+#   hubot <text> you're gonna have a bad time - Super Cool Ski Instructor from South Park #meme
+#   hubot Am I the only one around here <text> - The Big Lebowski #meme
+#   hubot What if I told you <text> - Matrix Morpheus #meme
+#   hubot <text> ain't nobody got time for that #meme
+#   hubot <text> I guarantee it - George Zimmer #meme
+#   hubot <text> and it's gone - South Park Banker Guy #meme
+#   hubot <text> nobody bats an eye <text> everyone loses their minds - Heath Ledger Joker #meme
+#   hubot back in my day <text> - Grumpy old man #meme
+#   hubot <text> they said, <text> they said - Laundry Viking #meme
+#   hubot no <text> for you! - Soup Nazi #meme
+#   hubot i can haz <text> - i can haz kitty #meme
+#   hubot one of us - one of us aliens from Toy Story #meme
+#   hubot <text> shut up and take my money - Futurama Fry - Shut up and take my money #meme
+#   hubot this is <text> - Sparta - This is Sparta! #meme
+#   hubot <text>, you keep using that word. <text> - You Keep Using That Word meme #meme
+#   hubot my name is inigo montoya, you <text>, prepare to die! - Prepare to Die meme #meme
+#   hubot you shall not <text> - Gandalf - You Shall Not ... meme #meme
+#   hubot <text> it's over 9000 - Over 9000 meme #meme
+#   hubot i see <text> - I see dead people meme #meme
+#   hubot there can only be one <text> - highlander meme #meme
+#   hubot <text>, but then I took an arrow to the knee - arrow to the knee meme #meme
 #
 # Author:
 #   dylanwenzlau and cpradio

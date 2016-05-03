@@ -8,9 +8,9 @@
 #   None
 # 
 # Commands:
-#   hubot bear me - A randomly selected bear
-#   hubot bear me <w>x<h> - A bear of the given size
-#   hubot bear bomb me <number> - Many many bears!
+#   hubot bear me - A randomly selected bear #bomb
+#   hubot bear me <w>x<h> - A bear of the given size #bomb #bears
+#   hubot bear bomb me <number> - Many many bears! #bomb #bears
 #
 # Author:
 #   dstrelau

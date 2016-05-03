@@ -8,8 +8,8 @@
 #   None
 #
 # Commands:
-#   hubot i am working on <anything> - Set what you're working on
-#   hubot what is everyone working on? - Find out what everyone is working on
+#   hubot i am working on <anything> - Set what you're working on #slack #commands
+#   hubot what is everyone working on? - Find out what everyone is working on #slack #commands
 #
 # Author:
 #   beezee

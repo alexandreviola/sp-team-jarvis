@@ -6,10 +6,10 @@
 #
 # Configuration:
 #   None
-# 
+#
 # Commands:
-#   hubot who's the|your boss|master?
-#   hubot who is the|your boss|master?
+#   hubot who's the|your boss|master? #slack #commands
+#   hubot who is the|your boss|master? #slack #commands
 #
 # Author:
 #   cpradio

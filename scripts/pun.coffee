@@ -6,9 +6,9 @@
 #
 # Configuration:
 #   None
-# 
+#
 # Commands:
-#   hubot pun me - get a random pun
+#   hubot pun me - get a random pun #jokes #puns
 #
 # Author:
 #   cpradio

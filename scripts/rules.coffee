@@ -8,10 +8,10 @@
 #   None
 #
 # Commands:
-#   hubot the rules
-#   hubot what are the rules?
-#   hubot the laws
-#   hubot what are the laws?
+#   hubot the rules #rules #laws
+#   hubot what are the rules? #rules #laws
+#   hubot the laws #rules #laws
+#   hubot what are the laws? #rules #laws
 #
 # Author:
 #   cpradio

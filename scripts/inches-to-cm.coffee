@@ -8,10 +8,10 @@
 #   None
 #
 # Commands:
-#   hubot convert <length>(cm) to in(ches) - convert <length> centimeters to inches
-#   hubot convert <length>cm - convert <length> centimeters to inches
-#   hubot convert <length>(in|inches) to cm - convert <length> inches to centimeters
-#   hubot convert <length>in(ches) - convert <length> inches to centimeters
+#   hubot convert <length>(cm) to in(ches) - convert <length> centimeters to inches #convert #conversion
+#   hubot convert <length>cm - convert <length> centimeters to inches #convert #conversion
+#   hubot convert <length>(in|inches) to cm - convert <length> inches to centimeters #convert #conversion
+#   hubot convert <length>in(ches) - convert <length> inches to centimeters #convert #conversion
 #
 # Author:
 #   cpradio
