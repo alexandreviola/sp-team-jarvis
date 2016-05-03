@@ -8,35 +8,35 @@
 #   None
 #
 # Commands:
-#   hubot convert <length>(km) to mi(les) - convert <length> kilometers to miles
-#   hubot convert <length>km - convert <length> kilometers to miles
-#   hubot convert <length>(mi|miles) to km - convert <length> miles to kilometers
-#   hubot convert <length>mi(les) - convert <length> miles to kilometers
+#   hubot convert <distance>(km) to mi(les) - convert <distance> kilometers to miles
+#   hubot convert <distance>km - convert <distance> kilometers to miles
+#   hubot convert <distance>(mi|miles) to km - convert <distance> miles to kilometers
+#   hubot convert <distance>mi(les) - convert <distance> miles to kilometers
 #
 # Author:
 #   cpradio
 
 module.exports = (robot) ->
   robot.respond /convert ([\d\.]+)\s?(km)? to mi(les)?$/i, (msg) ->
-    length = msg.match[1]
-    convertToMiles(msg, length)
+    distance = msg.match[1]
+    convertToMiles(msg, distance)
 
   robot.respond /convert ([\d\.]+)\s?km$/i, (msg) ->
-    length = msg.match[1]
-    convertToMiles(msg, length)
+    distance = msg.match[1]
+    convertToMiles(msg, distance)
 
   robot.respond /convert ([\d\.]+)\s?(mi(les)?)? to km$/i, (msg) ->
-    length = msg.match[1]
-    convertToKilometers(msg, length)
+    distance = msg.match[1]
+    convertToKilometers(msg, distance)
 
   robot.respond /convert ([\d\.]+)\s?mi(les)?$/i, (msg) ->
-    length = msg.match[1]
-    convertToKilometers(msg, length)
+    distance = msg.match[1]
+    convertToKilometers(msg, distance)
 
-convertToMiles = (msg, length) ->
-    converted = parseFloat(length) * 0.62137
-    msg.send "#{length} km is #{converted} mi"
+convertToMiles = (msg, distance) ->
+    converted = parseFloat(distance) * 0.62137
+    msg.send "#{distance} km is #{converted} mi"
 
-convertToKilometers = (msg, length) ->
-    converted = parseFloat(length) / 0.62137
-    msg.send "#{length} mi is #{converted} km"
+convertToKilometers = (msg, distance) ->
+    converted = parseFloat(distance) / 0.62137
+    msg.send "#{distance} mi is #{converted} km"
