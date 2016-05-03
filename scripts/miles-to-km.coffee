@@ -11,7 +11,7 @@
 #   hubot convert <length>(km) to mi(les) - convert <length> kilometers to miles
 #   hubot convert <length>km - convert <length> kilometers to miles
 #   hubot convert <length>(mi|miles) to km - convert <length> miles to kilometers
-#   hubot convert <length>mi(les) - convert <length> miles to kilmeters
+#   hubot convert <length>mi(les) - convert <length> miles to kilometers
 #
 # Author:
 #   cpradio
