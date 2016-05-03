@@ -11,7 +11,7 @@
 #   None
 #
 # Commands:
-#   hubot wiki me <query> - Searches for <query> on Wikipedia.
+#   hubot wiki me <query> - Searches for <query> on Wikipedia. #search
 #
 # Author:
 #   h3h

@@ -8,8 +8,8 @@
 #   None
 #
 # Commands:
-#   hubot which <text> (better|worse)[?] <text> or <text>?
-#   hubot who <text> (better|worse)[?] <text> or <text>?
+#   hubot which <text> (better|worse)[?] <text> or <text>? #polls
+#   hubot who <text> (better|worse)[?] <text> or <text>? #polls
 #
 # Author:
 #   cpradio

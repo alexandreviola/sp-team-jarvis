@@ -8,10 +8,10 @@
 #   None
 #
 # Commands:
-#   hubot convert <distance>(km) to mi(les) - convert <distance> kilometers to miles
-#   hubot convert <distance>km - convert <distance> kilometers to miles
-#   hubot convert <distance>(mi|miles) to km - convert <distance> miles to kilometers
-#   hubot convert <distance>mi(les) - convert <distance> miles to kilometers
+#   hubot convert <distance>(km) to mi(les) - convert <distance> kilometers to miles #convert #conversion
+#   hubot convert <distance>km - convert <distance> kilometers to miles #convert #conversion
+#   hubot convert <distance>(mi|miles) to km - convert <distance> miles to kilometers #convert #conversion
+#   hubot convert <distance>mi(les) - convert <distance> miles to kilometers #convert #conversion
 #
 # Author:
 #   cpradio

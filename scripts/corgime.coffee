@@ -8,8 +8,8 @@
 #   None
 #
 # Commands:
-#   hubot corgi me - Receive a corgi
-#   hubot corgi bomb N - get N corgis
+#   hubot corgi me - Receive a corgi #bomb #dogs #corgis
+#   hubot corgi bomb N - get N corgis #bomb #dogs #corgis
 #
 # Author:
 #   alexgodin

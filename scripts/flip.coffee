@@ -5,9 +5,9 @@
 #   "flip": "~0.1.0"
 #
 # Commands:
-#   hubot flip <text> - express your anger
-#   hubot rage flip <text> - express your anger with rage
-#   hubot unflip <text>
+#   hubot flip <text> - express your anger #random
+#   hubot rage flip <text> - express your anger with rage #random
+#   hubot unflip <text> #random
 #
 # Authors:
 #   jergason

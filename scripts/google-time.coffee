@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot current time in <location>
+#   hubot current time in <location> #time
 #
 # Author:
 #   cpradio

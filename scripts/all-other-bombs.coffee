@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot <text> bomb me <number> - Many many <text>s!
+#   hubot <text> bomb me <number> - Many many <text>s! #bomb
 #
 # Author:
 #   cpradio

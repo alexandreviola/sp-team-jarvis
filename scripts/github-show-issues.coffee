@@ -14,11 +14,11 @@
 #   HUBOT_GITHUB_API
 #
 # Commands:
-#   hubot show [me] [<limit> [of]] [<assignee>'s|my] [<label>] issues [for <user/repo>] [about <query>] -- Shows open GitHub issues for repo.
-#   hubot show [me] issues for <repo> -- List all issues for given repo IFF HUBOT_GITHUB_USER configured
-#   hubot show [me] issues for <user/repo> -- List all issues for given repo
-#   hubot show [me] issues -- Lists all issues IFF HUBOT_GITHUB_REPO configured
-#   hubot show <chat user's> issues -- Lists all issues for chat user IFF HUBOT_GITHUB_USER_(.*) configured
+#   hubot show [me] [<limit> [of]] [<assignee>'s|my] [<label>] issues [for <user/repo>] [about <query>] -- Shows open GitHub issues for repo. #github
+#   hubot show [me] issues for <repo> -- List all issues for given repo IFF HUBOT_GITHUB_USER configured #github
+#   hubot show [me] issues for <user/repo> -- List all issues for given repo #github
+#   hubot show [me] issues -- Lists all issues IFF HUBOT_GITHUB_REPO configured #github
+#   hubot show <chat user's> issues -- Lists all issues for chat user IFF HUBOT_GITHUB_USER_(.*) configured #github
 #
 # Notes:
 #   If, for example, HUBOT_GITHUB_USER_JOHN is set to GitHub user login

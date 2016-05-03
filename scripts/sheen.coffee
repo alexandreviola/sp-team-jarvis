@@ -6,11 +6,11 @@
 #
 # Configuration:
 #   None
-# 
+#
 # Commands:
-#   hubot sheen me - A randomly selected Charlie Sheen
-#   hubot sheen me <w>x<h> - A Charlie Sheen of the given size
-#   hubot sheen bomb me <number> - Many many Charlie Sheens!
+#   hubot sheen me - A randomly selected Charlie Sheen #bomb #sheen
+#   hubot sheen me <w>x<h> - A Charlie Sheen of the given size #bomb #sheen
+#   hubot sheen bomb me <number> - Many many Charlie Sheens! #bomb #sheen
 #
 # Author:
 #   dstrelau

@@ -8,7 +8,7 @@
 #   None
 #
 # Commands
-#   csgo|cs:go|couterstrike|counter strike - response that will hopefully irritate Ryan
+#   csgo|cs:go|couterstrike|counter strike - response that will hopefully irritate Ryan #nuisance
 #
 # Author:
 #   cpradio

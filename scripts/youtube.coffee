@@ -7,7 +7,7 @@
 #                      API v3
 #
 # Commands:
-#   hubot youtube me <query> - Searches YouTube for the query and returns the video embed link.
+#   hubot youtube me <query> - Searches YouTube for the query and returns the video embed link. #videos #search
 #
 # Notes:
 #   Make sure you don't go over your daily quota for API usage.

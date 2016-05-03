@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot what does the fox say?
+#   hubot what does the fox say? #songs
 #
 # Author:
 #   cpradio

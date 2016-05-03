@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   truth - displays a you can't handle the truth image
+#   truth - displays a you can't handle the truth image #meme
 #
 # Author:
 #   jeffreylees

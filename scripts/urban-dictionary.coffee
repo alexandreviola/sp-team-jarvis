@@ -18,7 +18,7 @@
 #   HUBOT_MASHAPE_KEY
 #
 # Commands:
-#   hubot ud-define <word> - Returns the definition of the word from Urban Dictionary
+#   hubot ud-define <word> - Returns the definition of the word from Urban Dictionary #search
 #
 # Author:
 #   BryanSaxon, cpradio

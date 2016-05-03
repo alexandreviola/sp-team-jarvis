@@ -10,9 +10,9 @@
 #   WORDNIK_API_KEY
 #
 # Commands:
-#   hubot hangman - Display the state of the current game
-#   hubot hangman <letterOrWord> - Make a guess
-#   hubot hangman -<letter> - Add letter to ruled out list
+#   hubot hangman - Display the state of the current game #games
+#   hubot hangman <letterOrWord> - Make a guess #games
+#   hubot hangman -<letter> - Add letter to ruled out list #games
 #
 # Author:
 #   kandrews

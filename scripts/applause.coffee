@@ -8,8 +8,8 @@
 #   None
 #
 # Commands:
-#   applause|applaud|bravo|slow clap - Get applause
-#   sarcastic applause|clap - Get sarcastic applause
+#   applause|applaud|bravo|slow clap - Get applause #meme
+#   sarcastic applause|clap - Get sarcastic applause #meme
 #
 # Author:
 #   joshfrench

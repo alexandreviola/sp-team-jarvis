@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot who am i?
+#   hubot who am i? #slack #commands
 #
 # Author:
 #   cpradio

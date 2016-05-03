@@ -2,7 +2,7 @@
 #   Create issues with hubot
 #
 # Commands:
-#   hubot new issue <content> - Create an issue on GitHub for Jarvis
+#   hubot new issue <content> - Create an issue on GitHub for Jarvis #github
 #
 # Author:
 #   cpradio

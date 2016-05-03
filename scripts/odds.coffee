@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   odds - displays a never tell me the odds image
+#   odds - displays a never tell me the odds image #meme
 #
 # Author:
 #   jeffreylees

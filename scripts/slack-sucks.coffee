@@ -8,7 +8,7 @@
 #   None
 #
 # Commands
-#   slack sucks - response that contradicts this will be stated
+#   slack sucks - response that contradicts this will be stated #slack
 #
 # Author:
 #   cpradio

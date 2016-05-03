@@ -8,10 +8,10 @@
 #   None
 #
 # Commands:
-#   hubot convert <degree>(F) to C - convert <degree> Fahrenheit to Celsius
-#   hubot convert <degree>C - convert <degree> Celsius to Fahrenheit
-#   hubot convert <degree>(C) to F - convert <degree> Celsius to Fahrenheit
-#   hubot convert <degree>F - convert <degree> Fahrenheit to Celsius
+#   hubot convert <degree>(F) to C - convert <degree> Fahrenheit to Celsius #convert #conversion
+#   hubot convert <degree>C - convert <degree> Celsius to Fahrenheit #convert #conversion
+#   hubot convert <degree>(C) to F - convert <degree> Celsius to Fahrenheit #convert #conversion
+#   hubot convert <degree>F - convert <degree> Fahrenheit to Celsius #convert #conversion
 #
 # Author:
 #   cpradio

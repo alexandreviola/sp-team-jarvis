@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   soon - Display a soon image (allows for many Os)
+#   soon - Display a soon image (allows for many Os) #meme
 #
 # Author:
 #   keithamus

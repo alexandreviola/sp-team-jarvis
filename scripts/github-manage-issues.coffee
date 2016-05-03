@@ -2,9 +2,9 @@
 #   Manage your GitHub issues with Hubot.
 #
 # Commands:
-#   hubot issues close #{issue number} - Close the specified issue
-#   hubot issues open #{issue number} - Open the specified issue
-#   hubot issues comment #{issue number} {comment} - Comment on the specified issue
+#   hubot issues close #{issue number} - Close the specified issue #github
+#   hubot issues open #{issue number} - Open the specified issue #github
+#   hubot issues comment #{issue number} {comment} - Comment on the specified issue #github
 #
 # Author:
 #   tombell

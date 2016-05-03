@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   combo breaker - displays a related image
+#   combo breaker - displays a related image #meme
 #
 # Author:
 #   cpradio

@@ -8,10 +8,10 @@
 #   None
 #
 # Commands
-#   :fu: - response with "zero ***** were given that day"
-#   hubot whatever
-#   hubot how many fucks were given that day?
-#   hubot how many ***** were given that day?
+#   :fu: - response with "zero ***** were given that day" #nuisance
+#   hubot whatever #nuisance
+#   hubot how many fucks were given that day? #nuisance
+#   hubot how many ***** were given that day? #nuisance
 #
 # Author:
 #   cpradio

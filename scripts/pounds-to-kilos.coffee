@@ -8,10 +8,10 @@
 #   None
 #
 # Commands:
-#   hubot convert <weight> to lbs - convert <weight> to pounds
-#   hubot convert <weight>kg - convert <weight> to pounds
-#   hubot convert <weight> to kg - convert <weight> to kilograms
-#   hubot convert <weight>lbs - convert <weight> to kilograms
+#   hubot convert <weight> to lbs - convert <weight> to pounds #convert #conversion
+#   hubot convert <weight>kg - convert <weight> to pounds #convert #conversion
+#   hubot convert <weight> to kg - convert <weight> to kilograms #convert #conversion
+#   hubot convert <weight>lbs - convert <weight> to kilograms #convert #conversion
 #
 # Author:
 #   cpradio

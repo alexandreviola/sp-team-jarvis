@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   inconceivable - displays a inconceivable! image
+#   inconceivable - displays a inconceivable! image #meme
 #
 # Author:
 #   cpradio

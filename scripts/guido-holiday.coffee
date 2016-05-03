@@ -8,10 +8,10 @@
 #   None
 #
 # Commands:
-#   hubot is guido on holiday?
-#   hubot is guido always on holiday?
-#   hubot where is guido?
-#   hubot what is guido doing?
+#   hubot is guido on holiday? #nuisance
+#   hubot is guido always on holiday? #nuisance
+#   hubot where is guido? #nuisance
+#   hubot what is guido doing? #nuisance
 #
 # Author:
 #   cpradio
