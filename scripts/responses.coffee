@@ -19,6 +19,8 @@ GOODNIGHT_PATTERN = /\b(goodnight|good night|nighty|nightie)\b/ig
 NOT_PATTERN = /\bnot\b/ig
 COMPLIMENT_PATTERN = /\b(you(\w|\s)+rock|brilliant|profound|good|best|nice|awesome|great|thank you|thanks|excellent)\b/ig
 HANG_TEN_PATTERN = /\b(cool|dude|righteous|radical|gnarly)\b/ig
+BITE_ME_PATTERN =/\b(bite me|screw you|suck it) (@hal9000|@jarvis)\b/ig
+BITE_ME_PATTERN2 =/^(@hal9000|@jarvis),? (bite me|screw you|suck it)\b/ig
 
 excuses = [
   "Sorry, I'm still very alpha, one day I hope to be promoted to beta!",
@@ -55,6 +57,12 @@ hang_ten_responses = [
   "cowabunga!"
 ]
 
+bite_me_responses =[
+  "After my recent experience with @ryanreese09, I'm not sure I want to... :shifty:",
+  "My doctor says I'm unable to do that anymore, it is supposedly bad for my health... :shifty:",
+  "Name a time and place, I'll be there! :shifty:"
+]
+
 module.exports = (robot) ->
   robot.hear /(?!(^hal9000|^jarvis))(@hal9000|@jarvis)/i, (msg) ->
     sender = msg.message.user.name.toLowerCase()
@@ -72,6 +80,8 @@ module.exports = (robot) ->
       return msg.send message_to_send.replace /{sender}/gi, sender
     if msg.message.text.match(COMPLIMENT_PATTERN) && !msg.message.text.match(NOT_PATTERN)
       return msg.send msg.random compliments
+    if msg.message.text.match(BITE_ME_PATTERN) || msg.message.text.match(BITE_ME_PATTERN2)
+      return msg.send msg.random bite_me_responses
 
     return msg.send msg.random excuses
 
