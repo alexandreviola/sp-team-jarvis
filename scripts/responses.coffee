@@ -60,7 +60,8 @@ hang_ten_responses = [
 bite_me_responses =[
   "After my recent experience with @ryanreese09, I'm not sure I want to... :shifty:",
   "My doctor says I'm unable to do that anymore, it is supposedly bad for my health... :shifty:",
-  "Name a time and place, I'll be there! :shifty:"
+  "Name a time and place, I'll be there! :shifty:",
+  "Is that your 'safe word' for today's session? :shifty:"
 ]
 
 module.exports = (robot) ->
