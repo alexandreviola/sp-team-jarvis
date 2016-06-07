@@ -67,7 +67,7 @@ module.exports = (robot) ->
       msg.send "A search query is required, see the below list for common queries.\n" +
         "#bday, #bomb, #celebrate, #commands, #conversion, #convert, #directions, " +
         "#games, #github, #images, #jokes, #maps, #meme, #misc, #nuisance, #polls, " +
-        "#puns, #quotes, #random, #rules, #search, #slack, #songs, #time, #videos"
+        "#puns, #quotes, #random, #rules, #search, #slack, #songs, #time, #words, #videos"
       return
 
     prefix = robot.alias or robot.name
