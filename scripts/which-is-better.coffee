@@ -8,8 +8,8 @@
 #   None
 #
 # Commands:
-#   hubot which <text> (better|worse)[?] <text> or <text>? #polls
-#   hubot who <text> (better|worse)[?] <text> or <text>? #polls
+#   hubot which <text> (better|worse)[?,] <text> or <text>? #polls
+#   hubot who <text> (better|worse)[?,] <text> or <text>? #polls
 #
 # Author:
 #   cpradio
@@ -22,7 +22,7 @@ uhh_what = [
 ]
 
 module.exports = (robot) ->
-  robot.respond /(which|who) (.*) (better|worse)\?* (.*) or (.*?)\??$/i, (msg) ->
+  robot.respond /(which|who) (.*) (better|worse)(\?|,)* (.*) or (.*?)\??$/i, (msg) ->
     choosen_response = msg.random [1..5]
     if choosen_response >= 3
       msg.send msg.random uhh_what
