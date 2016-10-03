@@ -13,7 +13,7 @@
 # Author:
 #   cpradio
 
-CURSING_PATTERN = /\b([f]+[u]+[c]+[k]+|[s]+[h]+[i]+[t]+|[b]+[i]+[t}+[c]+[h]+|[a]+[s]{2,}|[b]+[u]+[l]+[l]+[s]+[h]+[i]+[t]+)\b/ig
+CURSING_PATTERN = /\b([f]+[u]+[c]+[k]+|[s]+[h]+[i]+[t]+|[b]+[i]+[t}+[c]+[h]+|[a]+[s]{2,}|[b]+[u]+[l]+[l]+[s]+[h]+[i]+[t]+|[d]+[a]+[m]+[n]+|[s]+[c]+[r}+[e]+[w]+])\b/ig
 
 patronizing_tone = [
   "Do you kiss your mother with that mouth?",
