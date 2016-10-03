@@ -46,7 +46,8 @@ love_responses = [
 
 greetings = [
   "Hi @{sender}, how are you this fine day?",
-  "What can I do for you @{sender}?"
+  "What can I do for you @{sender}?",
+  "Hello. My name is Inigo Montoya. You killed my father. Prepare to die."
   #"Hello Clarice"
 ]
 
