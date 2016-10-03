@@ -34,7 +34,7 @@ module.exports = (robot) ->
 
   ytApiKey = process.env.HUBOT_GOOGLE_API
 
-  robot.respond /(?:youtube|yt)(?: me)?\s(.*)/i, (msg) ->
+  robot.respond /(?:youtube|yt|video)(?: me)?\s(.*)/i, (msg) ->
     rick_roll_opportunity = msg.random [1..10]
     if rick_roll_opportunity == 7 || rick_roll_opportunity == 3
       query = msg.random troll_queries
